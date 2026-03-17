@@ -22,6 +22,9 @@ A high-performance, automated trading system for [Polymarket](https://polymarket
 
 ## If you'd like, I can show you a profitable bot in action through a meeting.
 
+
+
+
 # 1. Polymarket Endcycle Sniper bot (Introduction)
 
 Polymarket Endcycle Sniper Bot is an automated trading system designed to monitor short-duration prediction markets and execute high-probability trades near the end of each 5-minute epoch. It connects to the orderbook in real time, triggers buys when prices exceed a configured threshold (e.g., 0.95), manages risk with optional exits or hedging, and redeems winning positions automatically after market resolution. 🚀📈
@@ -97,6 +100,23 @@ https://github.com/user-attachments/assets/7ba03ed4-f00d-4564-bf78-67c5159bb5c3
 <img width="1803" height="861" alt="polymarket-trading-ladder-bot-pnl" src="https://github.com/user-attachments/assets/6b9c55c5-f822-46ff-b956-ec9939736653" />
 
 
+---
+
+# ⚠️ Warning : This repository and link are not mine. Someone is misusing my GitHub name and avatar. Please avoid downloading or contacting anything from it, as it may be a scam.
+
+https://github.com/infraform/polymarket-kalshi-arbitrage-bot
+
+https://github.com/infraform/polymarket-arbitrage-trading-bot
+
+https://github.com/infraform/polymarket-trading-bot
+
+## In these repositories, this Telegram link is a scam link that requests a wallet connection.
+
+## So please do not click on this link.
+<img width="1106" height="226" alt="image" src="https://github.com/user-attachments/assets/db7cafb3-25cc-45bc-88ef-67e3a33046ae" />
+
+---
+---
 ---
 ---
 # 1. Polymarket Endcycle Sniper bot (Explain)
