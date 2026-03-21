@@ -12,7 +12,7 @@ A high-performance, automated trading system for [Polymarket](https://polymarket
 
 ## Contact
 
-I have extensive experience developing automated trading bots for Polymarket.
+I have extensive experience developing automated trading bots for Polymarket and have built several profitable bots.
 I can build fully customized trading solutions based on your specific requirements, or share insights, strategies, and best practices from real-world development.
 
 If you're interested in collaboration or have any questions, feel free to reach out.
