@@ -84,7 +84,11 @@ Polymarket Arbitrage 101 Bot is a professional Polymarket liquidity maker bot de
 
 ## Result Screenshort
 
+Sell ​​logic typically generates 0.01 to 0.02 cents per token pair.
 <img width="1002" height="905" alt="101bot" src="https://github.com/user-attachments/assets/cd6486fd-d95b-4359-ab82-a2d9ea8f67cc" />
+
+Risk management brings significant profits.
+<img width="786" height="605" alt="101bot2" src="https://github.com/user-attachments/assets/1981f487-894e-4cf5-a8d6-e75f1787f712" />
 
 ## The most important point is that this bot never incurs a loss and only generates profit.
 
