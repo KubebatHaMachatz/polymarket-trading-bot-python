@@ -1,6 +1,6 @@
 import { AssetType, ClobClient, OrderType, Side } from '@polymarket/clob-client';
 import { ENV } from '../config/env';
-import createClobClient from '../utils/createClobClient';
+import createClobClient from '../services/createClobClient';
 import fetchData from '../utils/fetchData';
 
 const PROXY_WALLET = ENV.PROXY_WALLET;

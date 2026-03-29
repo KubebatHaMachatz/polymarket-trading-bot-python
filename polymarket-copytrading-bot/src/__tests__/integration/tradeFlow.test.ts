@@ -4,6 +4,9 @@ import { executeTrade, executeAggregatedTrades } from '../../services/ExecutionE
 import { validateTrade } from '../../services/OrderValidator';
 import { addToAggregationBuffer, getReadyAggregatedTrades } from '../../services/TradeAggregator';
 import { calculateOrderSize, CopyStrategy } from '../../config/copyStrategy';
+import { ErrorHandler } from '../../utils/errorHandler';
+import postOrder from '../../utils/postOrder';
+import { getUserActivityModel } from '../../models/userHistory';
 
 // Mock all external dependencies
 jest.mock('@polymarket/clob-client');
@@ -18,11 +21,12 @@ describe('Trade Flow Integration Tests', () => {
 
     beforeEach(() => {
         jest.clearAllMocks();
-        mockClobClient = new ClobClient({} as any) as jest.Mocked<ClobClient>;
+        mockClobClient = new ClobClient("" as any, 137 as any) as jest.Mocked<ClobClient>;
     });
 
     describe('Single Trade Execution Flow', () => {
         it('should execute a valid trade successfully', async () => {
+            (ErrorHandler.withErrorHandling as jest.Mock).mockImplementation((fn: () => any) => fn());
             const mockTrade: UserActivityInterface = {
                 _id: 'trade1' as any,
                 proxyWallet: '0xproxy',
@@ -62,19 +66,13 @@ describe('Trade Flow Integration Tests', () => {
             (validateTrade as jest.Mock).mockResolvedValue(mockValidation);
 
             // Mock postOrder to succeed
-            const { postOrder } = require('../../utils/postOrder');
-            postOrder.mockResolvedValue(undefined);
+            (postOrder as jest.Mock).mockResolvedValue(undefined);
 
             // Mock database operations
-            const { getUserActivityModel } = require('../../models/userHistory');
             const mockModel = {
                 updateOne: jest.fn().mockResolvedValue({}),
             };
-            getUserActivityModel.mockReturnValue(mockModel);
-
-            // Mock error handler
-            const { ErrorHandler } = require('../../utils/errorHandler');
-            ErrorHandler.withErrorHandling.mockImplementation((fn) => fn());
+            (getUserActivityModel as jest.Mock).mockReturnValue(mockModel);
 
             await executeTrade(mockClobClient, mockTrade, '0xuser');
 
@@ -118,14 +116,12 @@ describe('Trade Flow Integration Tests', () => {
 
             (validateTrade as jest.Mock).mockResolvedValue(mockValidation);
 
-            const { getUserActivityModel } = require('../../models/userHistory');
             const mockModel = {
                 updateOne: jest.fn().mockResolvedValue({}),
             };
-            getUserActivityModel.mockReturnValue(mockModel);
+            (getUserActivityModel as jest.Mock).mockReturnValue(mockModel);
 
-            const { ErrorHandler } = require('../../utils/errorHandler');
-            ErrorHandler.withErrorHandling.mockImplementation((fn) => fn());
+            (ErrorHandler.withErrorHandling as jest.Mock).mockImplementation((fn: () => any) => fn());
 
             await executeTrade(mockClobClient, mockTrade, '0xuser');
 
@@ -174,17 +170,14 @@ describe('Trade Flow Integration Tests', () => {
                 userBalance: 5000,
             });
 
-            const { postOrder } = require('../../utils/postOrder');
-            postOrder.mockResolvedValue(undefined);
+            (postOrder as jest.Mock).mockResolvedValue(undefined);
 
-            const { getUserActivityModel } = require('../../models/userHistory');
             const mockModel = {
                 updateOne: jest.fn().mockResolvedValue({}),
             };
-            getUserActivityModel.mockReturnValue(mockModel);
+            (getUserActivityModel as jest.Mock).mockReturnValue(mockModel);
 
-            const { ErrorHandler } = require('../../utils/errorHandler');
-            ErrorHandler.withErrorHandling.mockImplementation((fn) => fn());
+            (ErrorHandler.withErrorHandling as jest.Mock).mockImplementation((fn: () => any) => fn());
 
             const aggregatedTrades = await getReadyAggregatedTrades();
             await executeAggregatedTrades(mockClobClient, aggregatedTrades);

@@ -70,11 +70,26 @@ const validateTrade = async (
             return total + (pos.currentValue || 0);
         }, 0);
 
+        // Calculate order size based on strategy
+        let intendedSize = trade.usdcSize;
+        const strategyConfig = ENV.COPY_STRATEGY_CONFIG;
+        
+        if (strategyConfig.strategy === 'FIXED') {
+            intendedSize = strategyConfig.copySize;
+        } else if (strategyConfig.strategy === 'PERCENTAGE' || strategyConfig.strategy === 'ADAPTIVE') {
+            intendedSize = trade.usdcSize * (strategyConfig.copySize / 100.0) * (strategyConfig.tradeMultiplier || 1.0);
+        }
+
+        // Apply max order size limits
+        if (strategyConfig.maxOrderSizeUSD && intendedSize > strategyConfig.maxOrderSizeUSD) {
+            intendedSize = strategyConfig.maxOrderSizeUSD;
+        }
+
         // Basic validation: ensure we have balance for buy orders
-        if (trade.side === 'BUY' && my_balance < trade.usdcSize) {
+        if (trade.side === 'BUY' && my_balance < intendedSize) {
             return {
                 isValid: false,
-                reason: `Insufficient balance: $${my_balance.toFixed(2)} < $${trade.usdcSize.toFixed(2)}`,
+                reason: `Insufficient balance: $${my_balance.toFixed(2)} < $${intendedSize.toFixed(2)} (Trade size was $${trade.usdcSize.toFixed(2)}, Strategy: ${strategyConfig.strategy})`,
             };
         }
 

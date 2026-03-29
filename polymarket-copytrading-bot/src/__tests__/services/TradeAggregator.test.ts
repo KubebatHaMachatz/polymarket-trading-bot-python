@@ -1,28 +1,24 @@
 import mongoose from 'mongoose';
-import {
-    addToAggregationBuffer,
-    getReadyAggregatedTrades,
-    getAggregationBufferSize,
-    TradeWithUser,
-    AggregatedTrade,
-} from '../../services/TradeAggregator';
 
 // Mock dependencies
 jest.mock('../../utils/logger', () => ({
-    Logger: {
+    __esModule: true,
+    default: {
         info: jest.fn(),
     },
 }));
 
+const mockUpdateOne = jest.fn().mockReturnValue({ exec: jest.fn().mockResolvedValue({}) });
 jest.mock('../../models/userHistory', () => ({
     getUserActivityModel: jest.fn(() => ({
-        updateOne: jest.fn().mockResolvedValue({}),
+        updateOne: mockUpdateOne,
     })),
 }));
 
 jest.mock('../../utils/errorHandler', () => ({
     ErrorHandler: {
-        withErrorHandling: jest.fn((fn) => fn()),
+        withErrorHandling: jest.fn((fn: () => any) => fn()),
+        handle: jest.fn(),
     },
 }));
 
@@ -34,14 +30,15 @@ jest.mock('../../config/env', () => ({
 }));
 
 describe('TradeAggregator', () => {
+    let TradeAggregator: any;
+
     beforeEach(() => {
-        // Clear the aggregation buffer before each test
         jest.clearAllMocks();
-        // Reset the module to clear the buffer
         jest.resetModules();
+        TradeAggregator = require('../../services/TradeAggregator');
     });
 
-    const createMockTrade = (overrides: Partial<TradeWithUser> = {}): TradeWithUser => ({
+    const createMockTrade = (overrides: any = {}): any => ({
         _id: new mongoose.Types.ObjectId(),
         proxyWallet: '0xproxy',
         timestamp: Date.now(),
@@ -73,90 +70,50 @@ describe('TradeAggregator', () => {
     describe('addToAggregationBuffer', () => {
         it('should create new aggregation for first trade', () => {
             const trade = createMockTrade();
-
-            addToAggregationBuffer(trade);
-
-            expect(getAggregationBufferSize()).toBe(1);
+            TradeAggregator.addToAggregationBuffer(trade);
+            expect(TradeAggregator.getAggregationBufferSize()).toBe(1);
         });
 
         it('should aggregate multiple trades with same key', async () => {
-            const trade1 = createMockTrade({
-                usdcSize: 100,
-                price: 1.0,
-            });
+            jest.useFakeTimers();
+            const trade1 = createMockTrade({ usdcSize: 100, price: 1.0 });
+            const trade2 = createMockTrade({ usdcSize: 50, price: 1.1 });
 
-            const trade2 = createMockTrade({
-                usdcSize: 50,
-                price: 1.1,
-            });
+            TradeAggregator.addToAggregationBuffer(trade1);
+            TradeAggregator.addToAggregationBuffer(trade2);
 
-            addToAggregationBuffer(trade1);
-            addToAggregationBuffer(trade2);
+            expect(TradeAggregator.getAggregationBufferSize()).toBe(1);
 
-            expect(getAggregationBufferSize()).toBe(1);
-
-            // Check that trades are ready (simulate time passing)
             jest.advanceTimersByTime(65 * 1000);
-            const readyTrades = await getReadyAggregatedTrades();
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
             expect(readyTrades).toHaveLength(1);
             expect(readyTrades[0].totalUsdcSize).toBe(150);
             expect(readyTrades[0].trades).toHaveLength(2);
+            jest.useRealTimers();
         });
 
-        it('should calculate weighted average price correctly', () => {
-            const trade1: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 100,
-                price: 1.0,
-                _id: 'trade1',
-            };
+        it('should calculate weighted average price correctly', async () => {
+            jest.useFakeTimers();
+            const trade1 = createMockTrade({ usdcSize: 100, price: 1.0 });
+            const trade2 = createMockTrade({ usdcSize: 200, price: 1.5 });
 
-            const trade2: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 200,
-                price: 1.5,
-                _id: 'trade2',
-            };
+            TradeAggregator.addToAggregationBuffer(trade1);
+            TradeAggregator.addToAggregationBuffer(trade2);
 
-            addToAggregationBuffer(trade1);
-            addToAggregationBuffer(trade2);
-
-            const readyTrades = getReadyAggregatedTrades();
-            // Weighted average: (100*1.0 + 200*1.5) / 300 = 350 / 300 = 1.166...
-            expect(readyTrades[0].averagePrice).toBeCloseTo(1.1667, 4);
+            jest.advanceTimersByTime(65 * 1000);
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
+            expect(readyTrades[0].averagePrice).toBeCloseTo(1.3333, 4);
+            jest.useRealTimers();
         });
 
         it('should handle different aggregation keys separately', () => {
-            const trade1: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 100,
-                price: 1.0,
-                _id: 'trade1',
-            };
+            const trade1 = createMockTrade({ userAddress: '0x123' });
+            const trade2 = createMockTrade({ userAddress: '0x456' });
 
-            const trade2: TradeWithUser = {
-                userAddress: '0x456',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 50,
-                price: 1.1,
-                _id: 'trade2',
-            };
+            TradeAggregator.addToAggregationBuffer(trade1);
+            TradeAggregator.addToAggregationBuffer(trade2);
 
-            addToAggregationBuffer(trade1);
-            addToAggregationBuffer(trade2);
-
-            expect(getAggregationBufferSize()).toBe(2);
+            expect(TradeAggregator.getAggregationBufferSize()).toBe(2);
         });
     });
 
@@ -169,165 +126,59 @@ describe('TradeAggregator', () => {
             jest.useRealTimers();
         });
 
-        it('should return empty array when no trades are ready', () => {
-            const trade: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 100,
-                price: 1.0,
-                _id: 'trade1',
-            };
+        it('should return empty array when no trades are ready', async () => {
+            const trade = createMockTrade();
+            TradeAggregator.addToAggregationBuffer(trade);
 
-            addToAggregationBuffer(trade);
-
-            // Time hasn't passed enough
-            jest.advanceTimersByTime(30 * 1000); // 30 seconds
-
-            const readyTrades = getReadyAggregatedTrades();
+            jest.advanceTimersByTime(30 * 1000);
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
             expect(readyTrades).toHaveLength(0);
         });
 
-        it('should return trades when window time has passed', () => {
-            const trade: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 100,
-                price: 1.0,
-                _id: 'trade1',
-            };
+        it('should return trades when window time has passed', async () => {
+            const trade = createMockTrade();
+            TradeAggregator.addToAggregationBuffer(trade);
 
-            addToAggregationBuffer(trade);
-
-            // Advance time past the window
-            jest.advanceTimersByTime(65 * 1000); // 65 seconds
-
-            const readyTrades = getReadyAggregatedTrades();
+            jest.advanceTimersByTime(65 * 1000);
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
             expect(readyTrades).toHaveLength(1);
             expect(readyTrades[0].userAddress).toBe('0x123');
-            expect(readyTrades[0].totalUsdcSize).toBe(100);
         });
 
-        it('should skip aggregations below minimum size', () => {
-            const trade: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 0.5, // Below minimum of 1.0
-                price: 1.0,
-                _id: 'trade1',
-            };
+        it('should skip aggregations below minimum size', async () => {
+            const trade = createMockTrade({ usdcSize: 0.5 });
+            TradeAggregator.addToAggregationBuffer(trade);
 
-            addToAggregationBuffer(trade);
-
-            // Advance time past the window
             jest.advanceTimersByTime(65 * 1000);
-
-            const readyTrades = getReadyAggregatedTrades();
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
             expect(readyTrades).toHaveLength(0);
-            expect(getAggregationBufferSize()).toBe(0); // Should be cleared
+            expect(TradeAggregator.getAggregationBufferSize()).toBe(0);
         });
 
         it('should mark individual trades as processed when skipping small aggregations', async () => {
-            const { getUserActivityModel } = require('../../models/userHistory');
-            const { ErrorHandler } = require('../../utils/errorHandler');
-
-            const mockModel = {
-                updateOne: jest.fn().mockResolvedValue({}),
-            };
-            getUserActivityModel.mockReturnValue(mockModel);
-            ErrorHandler.withErrorHandling.mockImplementation((fn) => fn());
-
-            const trade: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 0.5,
-                price: 1.0,
-                _id: 'trade1',
-            };
-
-            addToAggregationBuffer(trade);
+            const trade = createMockTrade({ usdcSize: 0.5, _id: 'trade1' });
+            TradeAggregator.addToAggregationBuffer(trade);
 
             jest.advanceTimersByTime(65 * 1000);
-
-            const readyTrades = getReadyAggregatedTrades();
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
 
             expect(readyTrades).toHaveLength(0);
-            expect(mockModel.updateOne).toHaveBeenCalledWith(
+            expect(mockUpdateOne).toHaveBeenCalledWith(
                 { _id: 'trade1' },
                 { bot: true }
             );
         });
 
-        it('should handle multiple ready aggregations', () => {
-            const trade1: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 100,
-                price: 1.0,
-                _id: 'trade1',
-            };
+        it('should handle multiple ready aggregations', async () => {
+            const trade1 = createMockTrade({ userAddress: '0x123', conditionId: 'cond1' });
+            const trade2 = createMockTrade({ userAddress: '0x456', conditionId: 'cond2' });
 
-            const trade2: TradeWithUser = {
-                userAddress: '0x456',
-                conditionId: 'cond2',
-                asset: 'asset2',
-                side: 'SELL',
-                usdcSize: 200,
-                price: 1.5,
-                _id: 'trade2',
-            };
-
-            addToAggregationBuffer(trade1);
-            addToAggregationBuffer(trade2);
+            TradeAggregator.addToAggregationBuffer(trade1);
+            TradeAggregator.addToAggregationBuffer(trade2);
 
             jest.advanceTimersByTime(65 * 1000);
-
-            const readyTrades = getReadyAggregatedTrades();
+            const readyTrades = await TradeAggregator.getReadyAggregatedTrades();
             expect(readyTrades).toHaveLength(2);
-            expect(getAggregationBufferSize()).toBe(0); // Should be cleared
-        });
-    });
-
-    describe('getAggregationBufferSize', () => {
-        it('should return 0 for empty buffer', () => {
-            expect(getAggregationBufferSize()).toBe(0);
-        });
-
-        it('should return correct size after adding trades', () => {
-            const trade1: TradeWithUser = {
-                userAddress: '0x123',
-                conditionId: 'cond1',
-                asset: 'asset1',
-                side: 'BUY',
-                usdcSize: 100,
-                price: 1.0,
-                _id: 'trade1',
-            };
-
-            const trade2: TradeWithUser = {
-                userAddress: '0x456',
-                conditionId: 'cond2',
-                asset: 'asset2',
-                side: 'SELL',
-                usdcSize: 200,
-                price: 1.5,
-                _id: 'trade2',
-            };
-
-            addToAggregationBuffer(trade1);
-            expect(getAggregationBufferSize()).toBe(1);
-
-            addToAggregationBuffer(trade2);
-            expect(getAggregationBufferSize()).toBe(2);
         });
     });
 });

@@ -5,7 +5,7 @@
 
 import * as dotenv from 'dotenv';
 import { CopyStrategy, CopyStrategyConfig, parseTieredMultipliers } from './copyStrategy';
-dotenv.config();
+dotenv.config({ override: true });
 
 /**
  * Validate Ethereum address format

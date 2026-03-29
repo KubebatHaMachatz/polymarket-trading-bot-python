@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Simulation results
+simulation_results/
+
+# Cache
+trader_data_cache/
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store

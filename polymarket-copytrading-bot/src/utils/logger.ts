@@ -5,7 +5,7 @@
 
 import chalk from 'chalk';
 import * as winston from 'winston';
-import * as DailyRotateFile from 'winston-daily-rotate-file';
+import DailyRotateFile from 'winston-daily-rotate-file';
 import * as path from 'path';
 
 /**
@@ -345,6 +345,7 @@ class Logger {
         // No structured log for separator
     }
 
+    private static lastWaitLog = 0;
     private static spinnerFrames = ['⏳', '⌛', '⏳'];
     private static spinnerIndex = 0;
 
@@ -354,6 +355,7 @@ class Logger {
      * @param {string} [extraInfo] - Extra information.
      */
     static waiting(traderCount: number, extraInfo?: string) {
+        const now = Date.now();
         const timestamp = new Date().toLocaleTimeString();
         const spinner = this.spinnerFrames[this.spinnerIndex % this.spinnerFrames.length];
         this.spinnerIndex++;
@@ -365,7 +367,12 @@ class Logger {
         if (this.shouldLog(LogLevel.DEBUG)) {
             process.stdout.write(chalk.dim(`\r[${timestamp}] `) + chalk.cyan(message) + '  ');
         }
-        this.logger.debug('Waiting for trades', { traderCount, extraInfo, type: 'waiting' });
+
+        // Only log to file every 10 seconds to avoid bloating logs
+        if (now - this.lastWaitLog > 10000) {
+            this.logger.debug('Waiting for trades', { traderCount, extraInfo, type: 'waiting' });
+            this.lastWaitLog = now;
+        }
     }
 
     /**

@@ -84,7 +84,7 @@ const getPendingFollowerIndices = async (
         .select('followerWallet')
         .lean()
         .exec();
-    const doneSet = new Set((existing || []).map((r: { followerWallet: string }) => r.followerWallet.toLowerCase()));
+    const doneSet = new Set((existing || []).map((r: any) => r.followerWallet.toLowerCase()));
     return followers
         .map((f, i) => (doneSet.has(f.address.toLowerCase()) ? -1 : i))
         .filter((i) => i >= 0);
@@ -209,7 +209,7 @@ const tradeExecutor = async (clobClients: ClobClient[]) => {
                 }
 
                 if (trades.length === 0 && readyAggregations.length === 0) {
-                    if (Date.now() - lastCheck > 300) {
+                    if (Date.now() - lastCheck > 10000) {
                         const bufferedCount = getAggregationBufferSize();
                         if (bufferedCount > 0) {
                             Logger.waiting(
@@ -255,7 +255,7 @@ const tradeExecutor = async (clobClients: ClobClient[]) => {
                     }
                     lastCheck = Date.now();
                 } else {
-                    if (Date.now() - lastCheck > 300) {
+                    if (Date.now() - lastCheck > 10000) {
                         Logger.waiting(USER_ADDRESSES.length);
                         lastCheck = Date.now();
                     }
@@ -266,7 +266,7 @@ const tradeExecutor = async (clobClients: ClobClient[]) => {
         }
 
         if (!isRunning) break;
-        await new Promise((resolve) => setTimeout(resolve, 300));
+        await new Promise((resolve) => setTimeout(resolve, 100));
     }
 
     Logger.info('Trade executor stopped');

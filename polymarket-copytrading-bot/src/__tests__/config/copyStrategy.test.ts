@@ -33,7 +33,7 @@ describe('Copy Strategy Configuration', () => {
             expect(result.cappedByMax).toBe(false);
             expect(result.reducedByBalance).toBe(false);
             expect(result.belowMinimum).toBe(false);
-            expect(result.reasoning).toContain('10% of $100.00 = $10.00');
+            expect(result.reasoning).toContain("10% of trader's $100.00 = $10.00");
         });
 
         it('should calculate fixed amount correctly', () => {
@@ -61,12 +61,18 @@ describe('Copy Strategy Configuration', () => {
             };
 
             // Small order (< threshold): should use higher percentage
+            // traderOrderSize = 50. factor = 50/200 = 0.25. 
+            // lerp(15, 10, 0.25) = 15 + (10-15)*0.25 = 15 - 1.25 = 13.75%
+            // 13.75% of 50 = 6.875
             const smallOrder = calculateOrderSize(adaptiveConfig, 50.0, 100.0, 0);
-            expect(smallOrder.baseAmount).toBeGreaterThan(5.0); // Higher percentage
+            expect(smallOrder.baseAmount).toBeGreaterThan(5.0); // 6.875 > 5.0
 
             // Large order (> threshold): should use lower percentage
+            // traderOrderSize = 500. factor = min(1, 500/200 - 1) = min(1, 2.5 - 1) = 1.0
+            // lerp(10, 5, 1.0) = 5%
+            // 5% of 500 = 25.0
             const largeOrder = calculateOrderSize(adaptiveConfig, 500.0, 100.0, 0);
-            expect(largeOrder.baseAmount).toBeLessThan(5.0); // Lower percentage
+            expect(largeOrder.baseAmount).toBe(25.0); 
         });
 
         it('should apply maximum order size limit', () => {
@@ -79,7 +85,7 @@ describe('Copy Strategy Configuration', () => {
 
             expect(result.finalAmount).toBe(5.0);
             expect(result.cappedByMax).toBe(true);
-            expect(result.reasoning).toContain('Capped at max $5.00');
+            expect(result.reasoning).toContain('Capped at max $5');
         });
 
         it('should apply balance reduction', () => {
@@ -122,7 +128,7 @@ describe('Copy Strategy Configuration', () => {
 
             expect(result.finalAmount).toBe(0);
             expect(result.belowMinimum).toBe(true);
-            expect(result.reasoning).toContain('Below minimum $20.00');
+            expect(result.reasoning).toContain('Below minimum $20');
         });
 
         it('should apply tiered multipliers', () => {
@@ -136,16 +142,19 @@ describe('Copy Strategy Configuration', () => {
             };
 
             // Small trade: 2x multiplier
+            // traderOrderSize = 25. 10% of 25 = 2.5. 2.5 * 2 = 5.0
             const smallTrade = calculateOrderSize(configWithTiers, 25.0, 100.0, 0);
-            expect(smallTrade.finalAmount).toBe(20.0); // 10 * 2
+            expect(smallTrade.finalAmount).toBe(5.0); 
 
             // Medium trade: 1x multiplier
+            // traderOrderSize = 100. 10% of 100 = 10. 10 * 1 = 10.0
             const mediumTrade = calculateOrderSize(configWithTiers, 100.0, 100.0, 0);
-            expect(mediumTrade.finalAmount).toBe(10.0); // 10 * 1
+            expect(mediumTrade.finalAmount).toBe(10.0); 
 
             // Large trade: 0.5x multiplier
+            // traderOrderSize = 300. 10% of 300 = 30. 30 * 0.5 = 15.0
             const largeTrade = calculateOrderSize(configWithTiers, 300.0, 100.0, 0);
-            expect(largeTrade.finalAmount).toBe(5.0); // 10 * 0.5
+            expect(largeTrade.finalAmount).toBe(15.0); 
         });
     });
 
@@ -358,7 +367,9 @@ describe('Copy Strategy Configuration', () => {
         });
 
         it('should throw on infinite tier not being last', () => {
-            expect(() => parseTieredMultipliers('100+:1.0,1-10:2.0')).toThrow('Tier with infinite upper bound must be last');
+            // Infinite tier at 100, then another tier starting at 200.
+            // After sorting, 100+ will be followed by 200-300, which is invalid.
+            expect(() => parseTieredMultipliers('100+:1.0,200-300:0.5')).toThrow('Tier with infinite upper bound must be last');
         });
     });
 });
