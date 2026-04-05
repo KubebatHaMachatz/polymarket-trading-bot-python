@@ -50,3 +50,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+polymarket-copytrading-bot/global_backtest_report.html
+
+polymarket-copytrading-bot/top_traders_by_category.json

@@ -441,4 +441,30 @@ export const ENV = {
     MONGO_URI: process.env.MONGO_URI as string,
     RPC_URL: process.env.RPC_URL as string,
     USDC_CONTRACT_ADDRESS: process.env.USDC_CONTRACT_ADDRESS as string,
+
+    /**
+     * Dusting Filter: Minimum trade size in USD required from the leader to trigger a copy.
+     * Rationale: Large whales often execute tiny "noise" trades ($0.10–$50) to test liquidity or "dust" followers.
+     * Only mirror "high-conviction" moves.
+     */
+    MIN_LEADER_TRADE_USD: parseFloat(process.env.MIN_LEADER_TRADE_USD || '1000.0'),
+
+    /**
+     * Liquidity Filter: Minimum 24h trading volume in USD for a market to be eligible for copy trading.
+     * Rationale: Low-volume markets have wide bid-ask spreads; we prefer deep liquidity to minimize impact.
+     */
+    MIN_MARKET_24H_VOL: parseFloat(process.env.MIN_MARKET_24H_VOL || '100000.0'),
+
+    /**
+     * Slippage Guard: Maximum allowed price deviation from the leader's entry price (e.g., 0.005 = 0.5%).
+     * Rationale: Prevents "chasing" a trade if the price moves significantly before our bot reacts.
+     */
+    MAX_PRICE_DEVIATION: parseFloat(process.env.MAX_PRICE_DEVIATION || '0.005'),
+
+    /**
+     * The "Inverse Bond" Ceiling (Risk-to-Reward Filter)
+     * Rationale: Buying at $0.93+ to make $1.00 creates a poor risk-to-reward ratio.
+     * We want to avoid "picking up pennies in front of a steamroller" and stay in the 2–3 week conviction trades.
+     */
+    MAX_COPY_PRICE: parseFloat(process.env.MAX_COPY_PRICE || '0.92'),
 };

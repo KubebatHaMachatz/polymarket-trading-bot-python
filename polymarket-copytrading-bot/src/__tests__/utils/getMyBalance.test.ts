@@ -3,6 +3,20 @@ import getMyBalance from '../../utils/getMyBalance';
 import { CircuitBreakerRegistry } from '../../utils/circuitBreaker';
 import { ApiError } from '../../errors';
 
+// Mock chalk to avoid ESM issue in Jest
+jest.mock('chalk', () => ({
+    red: (s: string) => s,
+    green: (s: string) => s,
+    yellow: (s: string) => s,
+    blue: (s: string) => s,
+    cyan: (s: string) => s,
+    magenta: (s: string) => s,
+    gray: (s: string) => s,
+    dim: (s: string) => s,
+    bold: (s: string) => s,
+    underline: (s: string) => s,
+}));
+
 // Mock ethers
 jest.mock('ethers');
 const mockedEthers = jest.mocked(ethers);

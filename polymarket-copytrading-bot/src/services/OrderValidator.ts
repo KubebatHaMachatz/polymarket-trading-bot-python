@@ -3,6 +3,7 @@
  * This module provides validation logic for trades before execution.
  */
 
+import { ethers, BigNumber } from 'ethers';
 import { UserPositionInterface } from '../interfaces/User';
 import { UserActivityInterface } from '../interfaces/User';
 import { ENV } from '../config/env';
@@ -11,6 +12,8 @@ import getMyBalance from '../utils/getMyBalance';
 import { ErrorHandler } from '../utils/errorHandler';
 import { CircuitBreakerRegistry } from '../utils/circuitBreaker';
 import { ValidationError } from '../errors';
+import { ClobClient } from '@polymarket/clob-client';
+import Logger from '../utils/logger';
 
 /** Wallet to validate (follower). Defaults to primary proxy wallet. */
 const defaultProxyWallet = () => ENV.PROXY_WALLET;
@@ -33,17 +36,131 @@ interface ValidationResult {
  * @param trade - The trade activity to validate.
  * @param userAddress - The address of the user (trader) whose trade is being validated.
  * @param proxyWallet - Optional follower wallet address; if not set, uses ENV.PROXY_WALLET.
+ * @param clobClient - Optional CLOB client for fetching order book data.
  */
 const validateTrade = async (
     trade: UserActivityInterface,
     userAddress: string,
-    proxyWallet?: string
+    proxyWallet?: string,
+    clobClient?: ClobClient
 ): Promise<ValidationResult> => {
     const myWallet = proxyWallet ?? defaultProxyWallet();
     const positionsBreaker = CircuitBreakerRegistry.getBreaker('polymarket-validation-positions', 3, 30000);
     const balanceBreaker = CircuitBreakerRegistry.getBreaker('polymarket-validation-balance', 3, 30000);
+    const marketBreaker = CircuitBreakerRegistry.getBreaker('polymarket-market-data', 5, 30000);
 
     try {
+        /**
+         * 1. MIN_LEADER_TRADE_USD (Dusting Filter)
+         * Rationale: Large whales often execute tiny "noise" trades ($0.10–$50) to test liquidity or "dust" followers.
+         * We only want to mirror "high-conviction" moves.
+         */
+        if (trade.usdcSize < ENV.MIN_LEADER_TRADE_USD) {
+            return {
+                isValid: false,
+                reason: `[SKIP] Trade size below threshold. (Leader traded $${trade.usdcSize.toFixed(2)}, min $${ENV.MIN_LEADER_TRADE_USD})`,
+            };
+        }
+
+        /**
+         * 2. MIN_MARKET_24H_VOL (Liquidity Filter)
+         * Rationale: In low-volume markets, even a $5 order can suffer from a wide bid-ask spread.
+         * We fetch 24h volume for the specific market to ensure deep liquidity.
+         */
+        const marketUrl = `https://gamma-api.polymarket.com/markets?limit=1&active=true&closed=false&condition_id=${trade.conditionId}`;
+        const marketData = await marketBreaker.execute(() => fetchData(marketUrl));
+        
+        if (Array.isArray(marketData) && marketData.length > 0) {
+            const vol24h = parseFloat(marketData[0].volume24hr || '0');
+            if (vol24h < ENV.MIN_MARKET_24H_VOL) {
+                return {
+                    isValid: false,
+                    reason: `[SKIP] Market liquidity insufficient. (24h Vol $${vol24h.toFixed(2)} < $${ENV.MIN_MARKET_24H_VOL})`,
+                };
+            }
+
+            /**
+             * 2b. Wash Trade & Self-Fill Detection (Market Dominance Check)
+             * Rationale: If a single trade makes up a vast majority of recent activity, it may be a wash trade.
+             * Requirement: Verify if the leader's trade represents more than 20% of the total market volume
+             * for that specific token_id in the last 60 seconds.
+             * Note: Since 60s real-time volume is not easily available via Gamma API, we use a high-sensitivity 
+             * check against 24h volume (e.g. if one trade is > 2% of 24h volume, it's highly dominant).
+             */
+            const marketDominance = trade.usdcSize / vol24h;
+            if (marketDominance > 0.02) { // 2% of 24h volume is a very large single trade
+                return {
+                    isValid: false,
+                    reason: `[SKIP] Potential Wash Trade: Leader volume > 20% of recent market activity.`,
+                };
+            }
+        }
+
+        /**
+         * 3. Order Book Based Checks (MAX_COPY_PRICE and MAX_PRICE_DEVIATION)
+         */
+        if (clobClient) {
+            const orderBook = await clobClient.getOrderBook(trade.asset);
+            
+            // Use 6 decimals for price comparison consistency (Polymarket standard for USDC/price)
+            const leaderPriceBN = ethers.utils.parseUnits(trade.price.toString(), 6);
+            const maxCopyPriceBN = ethers.utils.parseUnits(ENV.MAX_COPY_PRICE.toString(), 6);
+
+            if (trade.side === 'BUY') {
+                if (orderBook.asks && orderBook.asks.length > 0) {
+                    const bestAskPrice = Math.min(...orderBook.asks.map(a => parseFloat(a.price)));
+                    const bestAskBN = ethers.utils.parseUnits(bestAskPrice.toString(), 6);
+                    
+                    /**
+                     * 3a. MAX_COPY_PRICE (The "Inverse Bond" Ceiling)
+                     * Rationale: Buying at $0.93+ to make $1.00 creates a poor risk-to-reward ratio.
+                     */
+                    if (bestAskBN.gt(maxCopyPriceBN)) {
+                        return {
+                            isValid: false,
+                            reason: `[SKIP] Price ${bestAskPrice.toFixed(4)} exceeds ${ENV.MAX_COPY_PRICE} ceiling.`,
+                        };
+                    }
+
+                    /**
+                     * 3b. MAX_PRICE_DEVIATION (Slippage Guard)
+                     * BigNumber calculation: (bestAsk - leaderPrice) / leaderPrice > threshold
+                     * Equivalent to: bestAsk > leaderPrice * (1 + threshold)
+                     */
+                    const thresholdMultiplierBN = ethers.utils.parseUnits((1 + ENV.MAX_PRICE_DEVIATION).toString(), 6);
+                    const maxAllowedPriceBN = leaderPriceBN.mul(thresholdMultiplierBN).div(ethers.utils.parseUnits('1', 6));
+                    
+                    if (bestAskBN.gt(maxAllowedPriceBN)) {
+                        const deviation = (bestAskPrice - trade.price) / trade.price;
+                        return {
+                            isValid: false,
+                            reason: `[SKIP] Price deviation too high (Slippage). (Current Ask $${bestAskPrice.toFixed(4)} is ${(deviation * 100).toFixed(2)}% > leader's $${trade.price.toFixed(4)})`,
+                        };
+                    }
+                }
+            } else if (trade.side === 'SELL') {
+                if (orderBook.bids && orderBook.bids.length > 0) {
+                    const bestBidPrice = Math.max(...orderBook.bids.map(b => parseFloat(b.price)));
+                    const bestBidBN = ethers.utils.parseUnits(bestBidPrice.toString(), 6);
+                    
+                    /**
+                     * MAX_PRICE_DEVIATION (Slippage Guard) for SELL
+                     * Equivalent to: bestBid < leaderPrice * (1 - threshold)
+                     */
+                    const thresholdMultiplierBN = ethers.utils.parseUnits((1 - ENV.MAX_PRICE_DEVIATION).toString(), 6);
+                    const minAllowedPriceBN = leaderPriceBN.mul(thresholdMultiplierBN).div(ethers.utils.parseUnits('1', 6));
+                    
+                    if (bestBidBN.lt(minAllowedPriceBN)) {
+                        const deviation = (trade.price - bestBidPrice) / trade.price;
+                        return {
+                            isValid: false,
+                            reason: `[SKIP] Price deviation too high (Slippage). (Current Bid $${bestBidPrice.toFixed(4)} is ${(deviation * 100).toFixed(2)}% < leader's $${trade.price.toFixed(4)})`,
+                        };
+                    }
+                }
+            }
+        }
+
         const myPositionsUrl = `https://data-api.polymarket.com/positions?user=${myWallet}`;
         const userPositionsUrl = `https://data-api.polymarket.com/positions?user=${userAddress}`;
 

@@ -56,7 +56,8 @@ const executeTrade = async (
         const validation: ValidationResult = await validateTrade(
             trade,
             userAddress,
-            followerWallet
+            followerWallet,
+            clobClient
         );
 
         if (!validation.isValid) {
@@ -184,7 +185,7 @@ const executeAggregatedTrades = async (
             }
 
             // Validate using the first trade as representative
-            const validation: ValidationResult = await validateTrade(agg.trades[0], agg.userAddress);
+            const validation: ValidationResult = await validateTrade(agg.trades[0], agg.userAddress, undefined, clobClient);
 
             if (!validation.isValid) {
                 Logger.error(`Aggregated trade validation failed: ${validation.reason}`);

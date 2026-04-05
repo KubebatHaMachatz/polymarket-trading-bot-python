@@ -75,7 +75,22 @@ npm run health-check
 npm run help
 ```
 
-### 4. Post-Install Welcome Message
+### 4. Pilot Capital Protection Filters
+
+**What it does:**
+- Implements Dusting, Liquidity, and Slippage filters.
+- **Dusting**: Skips leader trades < $1,000.
+- **Liquidity**: Skips markets with < $100,000 24h volume.
+- **Slippage**: Skips trades if the price deviates > 0.5% from the leader's price.
+
+**Benefits:**
+- Protects capital for small pilot accounts.
+- Ensures high-conviction trades in deep liquidity.
+
+**Documentation:**
+- [🛡️ Pilot Trading Filters (Capital Protection)](./PILOT_FILTERS.md)
+
+### 5. Post-Install Welcome Message
 
 **What it does:**
 
