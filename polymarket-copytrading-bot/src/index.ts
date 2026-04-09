@@ -94,7 +94,7 @@ export const main = async () => {
 
         await connectDB();
         Logger.startup(USER_ADDRESSES, PROXY_WALLET);
-        Notifier.notifyStartup(USER_ADDRESSES, PROXY_WALLET);
+        await Notifier.notifyStartup(USER_ADDRESSES, PROXY_WALLET);
 
         // Perform initial health check
         Logger.info('Performing initial health check...');

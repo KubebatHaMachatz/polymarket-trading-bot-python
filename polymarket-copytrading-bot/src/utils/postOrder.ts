@@ -148,7 +148,7 @@ const postOrder = async (
                     true,
                     `Sold ${order_arges.amount} tokens at $${order_arges.price}`
                 );
-                Notifier.notifyTrade('SELL', order_arges.amount * order_arges.price, order_arges.price, trade.slug || trade.title || trade.asset, userAddress);
+                await Notifier.notifyTrade('SELL', order_arges.amount * order_arges.price, order_arges.price, trade.slug || trade.title || trade.asset, userAddress);
                 remaining -= order_arges.amount;
             } else {
                 const errorMessage = extractOrderError(resp);
@@ -309,7 +309,7 @@ const postOrder = async (
                     true,
                     `Placed GTC Limit Order for ${tokensBought.toFixed(2)} tokens at $${limitPrice.toFixed(4)}`
                 );
-                Notifier.notifyTrade('BUY', tokensBought * limitPrice, limitPrice, trade.slug || trade.title || trade.asset, userAddress);
+                await Notifier.notifyTrade('BUY', tokensBought * limitPrice, limitPrice, trade.slug || trade.title || trade.asset, userAddress);
                 remaining = 0; // Assume the $5 pilot trade is handled by this one limit order
             } else {
                 const errorMessage = extractOrderError(resp);
@@ -509,7 +509,7 @@ const postOrder = async (
                     true,
                     `Sold ${order_arges.amount} tokens at $${order_arges.price}`
                 );
-                Notifier.notifyTrade('SELL', order_arges.amount * order_arges.price, order_arges.price, trade.slug || trade.title || trade.asset, userAddress);
+                await Notifier.notifyTrade('SELL', order_arges.amount * order_arges.price, order_arges.price, trade.slug || trade.title || trade.asset, userAddress);
                 remaining -= order_arges.amount;
             } else {
                 const errorMessage = extractOrderError(resp);

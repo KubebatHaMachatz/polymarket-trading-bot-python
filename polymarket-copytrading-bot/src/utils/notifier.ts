@@ -13,15 +13,19 @@ class Notifier {
     static async notify(message: string): Promise<void> {
         // Send to Telegram if configured
         if (ENV.TELEGRAM_TOKEN && ENV.TELEGRAM_CHAT_ID) {
+            Logger.info(`Sending Telegram notification to chat ${ENV.TELEGRAM_CHAT_ID}...`);
             try {
                 const url = `https://api.telegram.org/bot${ENV.TELEGRAM_TOKEN}/sendMessage`;
-                await axios.post(url, {
+                const response = await axios.post(url, {
                     chat_id: ENV.TELEGRAM_CHAT_ID,
                     text: message,
-                    parse_mode: 'Markdown',
+                    parse_mode: 'HTML',
                 });
-            } catch (error) {
-                Logger.error(`Error sending Telegram notification: ${error}`);
+                Logger.info(`Telegram notification sent successfully: ${response.status}`);
+            } catch (error: any) {
+                const errorData = error.response?.data;
+                const description = errorData?.description || error.message;
+                Logger.error(`Error sending Telegram notification: ${description}`);
             }
         }
 
@@ -42,10 +46,10 @@ class Notifier {
      */
     static async notifyStartup(traders: string[], wallet: string): Promise<void> {
         const maskedWallet = `${wallet.slice(0, 6)}...${wallet.slice(-4)}`;
-        const message = `🚀 *Polymarket Bot Started*\n\n` +
-            `💼 *Wallet:* \`${maskedWallet}\`\n` +
-            `📊 *Tracking:* ${traders.length} trader(s)\n` +
-            `🕒 *Time:* ${new Date().toLocaleString()}`;
+        const message = `🚀 <b>Polymarket Bot Started</b>\n\n` +
+            `💼 <b>Wallet:</b> <code>${maskedWallet}</code>\n` +
+            `📊 <b>Tracking:</b> ${traders.length} trader(s)\n` +
+            `🕒 <b>Time:</b> ${new Date().toLocaleString()}`;
         await this.notify(message);
     }
 
@@ -55,11 +59,11 @@ class Notifier {
     static async notifyTrade(side: string, amount: number, price: number, market: string, trader: string): Promise<void> {
         const emoji = side === 'BUY' ? '🟢' : '🔴';
         const maskedTrader = `${trader.slice(0, 6)}...${trader.slice(-4)}`;
-        const message = `${emoji} *Trade Executed: ${side}*\n\n` +
-            `📈 *Market:* ${market}\n` +
-            `💰 *Amount:* $${amount.toFixed(2)}\n` +
-            `🏷️ *Price:* $${price.toFixed(4)}\n` +
-            `👤 *Copying:* \`${maskedTrader}\``;
+        const message = `${emoji} <b>Trade Executed: ${side}</b>\n\n` +
+            `📈 <b>Market:</b> ${market}\n` +
+            `💰 <b>Amount:</b> $${amount.toFixed(2)}\n` +
+            `🏷️ <b>Price:</b> $${price.toFixed(4)}\n` +
+            `👤 <b>Copying:</b> <code>${maskedTrader}</code>`;
         await this.notify(message);
     }
 
@@ -68,13 +72,13 @@ class Notifier {
      */
     static async notifyFiltered(reason: string, market: string, trader: string, amount?: number): Promise<void> {
         const maskedTrader = `${trader.slice(0, 6)}...${trader.slice(-4)}`;
-        let message = `⚠️ *Trade Ignored*\n\n` +
-            `📈 *Market:* ${market}\n` +
-            `👤 *Trader:* \`${maskedTrader}\`\n` +
-            `🚫 *Reason:* ${reason}`;
+        let message = `⚠️ <b>Trade Ignored</b>\n\n` +
+            `📈 <b>Market:</b> ${market}\n` +
+            `👤 <b>Trader:</b> <code>${maskedTrader}</code>\n` +
+            `🚫 <b>Reason:</b> ${reason}`;
         
         if (amount) {
-            message += `\n💰 *Leader Amount:* $${amount.toFixed(2)}`;
+            message += `\n💰 <b>Leader Amount:</b> $${amount.toFixed(2)}`;
         }
         
         await this.notify(message);

@@ -374,7 +374,9 @@ class Logger {
 
         // Keep the debug file log as is (once every 10s is fine for files)
         if (now - this.lastWaitLog > 10000) {
-            this.logger.debug('Waiting for trades', { traderCount, extraInfo, type: 'waiting' });
+            if (this.shouldLog(LogLevel.DEBUG)) {
+                this.logger.debug('Waiting for trades', { traderCount, extraInfo, type: 'waiting' });
+            }
             this.lastWaitLog = now;
         }
     }

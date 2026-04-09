@@ -63,7 +63,7 @@ const executeTrade = async (
 
         if (!validation.isValid) {
             Logger.error(`Trade validation failed: ${validation.reason}`);
-            Notifier.notifyFiltered(validation.reason, trade.slug || trade.title || trade.asset, userAddress, trade.usdcSize);
+            await Notifier.notifyFiltered(validation.reason || 'Unknown reason', trade.slug || trade.title || trade.asset, userAddress, trade.usdcSize);
             if (isMultiWallet && followerWallet) {
                 await CopyExecution.create({
                     traderAddress: userAddress,
