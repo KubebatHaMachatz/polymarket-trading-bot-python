@@ -59,7 +59,7 @@ const validateTrade = async (
     const myWallet = proxyWallet ?? defaultProxyWallet();
     const positionsBreaker = CircuitBreakerRegistry.getBreaker('polymarket-validation-positions', 3, 30000);
     const balanceBreaker = CircuitBreakerRegistry.getBreaker('polymarket-validation-balance', 3, 30000);
-    const marketBreaker = CircuitBreakerRegistry.getBreaker('polymarket-market-data', 5, 30000);
+    const marketBreaker = CircuitBreakerRegistry.getBreaker('polymarket-market-data', 20, 30000);
 
     try {
         /**
@@ -79,10 +79,15 @@ const validateTrade = async (
          * Rationale: In low-volume markets, even a $5 order can suffer from a wide bid-ask spread.
          * We fetch 24h volume for the specific market to ensure deep liquidity.
          */
-        const marketUrl = `https://gamma-api.polymarket.com/markets?limit=1&active=true&closed=false&condition_id=${trade.conditionId}`;
-        const marketData = await marketBreaker.execute(() => fetchData(marketUrl));
+        let skipVolumeCheck = trade.usdcSize < 10.0;
+        let marketData: any = [];
         
-        if (Array.isArray(marketData) && marketData.length > 0) {
+        if (!skipVolumeCheck) {
+            const marketUrl = `https://gamma-api.polymarket.com/markets?limit=1&active=true&closed=false&condition_id=${trade.conditionId}`;
+            marketData = await marketBreaker.execute(() => fetchData(marketUrl));
+        }
+        
+        if (marketData && Array.isArray(marketData) && marketData.length > 0) {
             const vol24h = parseFloat(marketData[0].volume24hr || '0');
             if (vol24h < ENV.MIN_MARKET_24H_VOL) {
                 return {
@@ -220,8 +225,8 @@ const validateTrade = async (
 
         return {
             isValid: true,
-            myPosition: my_position,
-            userPosition: user_position,
+            myPosition: my_position || {} as UserPositionInterface,
+            userPosition: user_position || {} as UserPositionInterface,
             myBalance: my_balance,
             userBalance: user_balance,
         };

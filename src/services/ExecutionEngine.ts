@@ -96,12 +96,21 @@ const executeTrade = async (
             return;
         }
 
+        // Ensure trade.asset is passed correctly as tokenId if position info is missing
+        const userPos = (validation.userPosition && Object.keys(validation.userPosition).length > 0) 
+            ? validation.userPosition 
+            : { asset: trade.asset, conditionId: trade.conditionId } as any;
+            
+        const myPos = (validation.myPosition && Object.keys(validation.myPosition).length > 0)
+            ? validation.myPosition
+            : { asset: trade.asset, conditionId: trade.conditionId } as any;
+
         await ErrorHandler.withErrorHandling(
             () => postOrder(
                 clobClient,
                 trade.side === 'BUY' ? 'buy' : 'sell',
-                validation.myPosition,
-                validation.userPosition,
+                myPos,
+                userPos,
                 trade,
                 validation.myBalance!,
                 validation.userBalance!,
@@ -111,18 +120,6 @@ const executeTrade = async (
             `Executing ${trade.side} trade for ${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`,
             'execute trade order'
         );
-
-        if (isMultiWallet && followerWallet) {
-            const lastDoc = await UserActivity.findById(trade._id).select('myBoughtSize').lean().exec();
-            await CopyExecution.create({
-                traderAddress: userAddress,
-                activityId: trade._id,
-                followerWallet,
-                status: 'success',
-                myBoughtSize: (lastDoc as { myBoughtSize?: number })?.myBoughtSize,
-            });
-        }
-
         Logger.separator();
     } catch (error) {
         ErrorHandler.handle(error, `Trade execution for ${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`);
