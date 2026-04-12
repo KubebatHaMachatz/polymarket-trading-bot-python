@@ -1,0 +1,65 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/.ad5ee5d94c79e7c549b39754cbe2ec682dd1e676-audit.json",
+    "files": [
+        {
+            "date": 1774563186749,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-03-27.log",
+            "hash": "5efeb9f1245b6f7571e7a84234cb58f437c2a6352b4bca9f4145570a6bb97466"
+        },
+        {
+            "date": 1774645204925,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-03-28.log",
+            "hash": "fe5cabcf6fb69089dbc9c488182918902cde1325567f80c77182ccc41dde859a"
+        },
+        {
+            "date": 1774731602234,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-03-29.log",
+            "hash": "b097707fd7f53d603a25e533e0983e7b239e05ae5ab86e30038c85c869520003"
+        },
+        {
+            "date": 1774818004751,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-03-30.log",
+            "hash": "02264a7531db1642032a6c5f92fe8bd67e9e9067654691b1f2c8972da20491e3"
+        },
+        {
+            "date": 1774904405923,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-03-31.log",
+            "hash": "87844f45c9d838f49a3b0f231da1eded4c04dac3e14f3828b164a9e087ea96c5"
+        },
+        {
+            "date": 1774990804799,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-04-01.log",
+            "hash": "8351541b218004518371f965d8cffc8948bc47cd6deb4f6b7fd1a07f8d60762c"
+        },
+        {
+            "date": 1775475776020,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-04-06.log",
+            "hash": "c60fa99dd83601a54b254516e02058f707bcf34c94de4ad58a1eab17e3cdf67c"
+        },
+        {
+            "date": 1775509203669,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-04-07.log",
+            "hash": "32e899b5d5061bd7d5291c5db6fd70cf66de7e116b58278cc7663cc878a7e371"
+        },
+        {
+            "date": 1775595605011,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-04-08.log",
+            "hash": "9c9723606831c8ef7e10b260c5739c344fcad59075e12f6006d5b4e05b96b612"
+        },
+        {
+            "date": 1775682006470,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-04-09.log",
+            "hash": "a621bc1bcdb8bc7238f92f0dec5f464ebea7691b27b0133828d46b94bccd83e4"
+        },
+        {
+            "date": 1775768560438,
+            "name": "/Users/tzahit/code/polymarket-trading-bot-python/polymarket-copytrading-bot/logs/bot-2026-04-10.log",
+            "hash": "1865c8e34926157f49eeed1ce2a3136531bedc7fc06d8a9218eb24f8139e8694"
+        }
+    ],
+    "hashType": "sha256"
+}

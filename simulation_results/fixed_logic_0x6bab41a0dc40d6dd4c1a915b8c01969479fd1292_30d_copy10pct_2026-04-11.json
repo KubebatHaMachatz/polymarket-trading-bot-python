@@ -1,0 +1,122 @@
+{
+  "id": "sim_0x6bab41_1775938724557",
+  "name": "FIXED_0x6bab_30d_copy10pct",
+  "logic": "fixed_percentage",
+  "timestamp": 1775938724557,
+  "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
+  "startingCapital": 1000,
+  "currentCapital": 1005.702878187085,
+  "totalTrades": 500,
+  "copiedTrades": 7,
+  "skippedTrades": 493,
+  "totalInvested": 999.791077205,
+  "currentValue": 1005.702878187085,
+  "realizedPnl": 0,
+  "unrealizedPnl": 5.702878187084974,
+  "totalPnl": 5.702878187085048,
+  "roi": 0.5702878187085048,
+  "positions": [
+    {
+      "market": "1910830010387565971650098373488592514702818137344973088263643820608151819241",
+      "outcome": "No",
+      "sharesHeld": 1332.143724,
+      "entryPrice": 0.7,
+      "exitPrice": null,
+      "invested": 934.7110441,
+      "currentValue": 965.8041996189526,
+      "pnl": 31.093155518952585,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1775843653,
+          "side": "BUY",
+          "price": 0.7,
+          "size": 1111.1000000000001,
+          "usdcSize": 777.77,
+          "traderPercent": 7.7777,
+          "yourSize": 777.77
+        },
+        {
+          "timestamp": 1775836057,
+          "side": "BUY",
+          "price": 0.71,
+          "size": 111.10000000000001,
+          "usdcSize": 78.881,
+          "traderPercent": 0.78881,
+          "yourSize": 78.881
+        },
+        {
+          "timestamp": 1775835775,
+          "side": "BUY",
+          "price": 0.71,
+          "size": 7.000000000000001,
+          "usdcSize": 4.970000000000001,
+          "traderPercent": 0.04970000000000001,
+          "yourSize": 4.970000000000001
+        },
+        {
+          "timestamp": 1775835733,
+          "side": "BUY",
+          "price": 0.7100000034981906,
+          "size": 17.151724,
+          "usdcSize": 12.1777241,
+          "traderPercent": 0.12177724100000001,
+          "yourSize": 12.1777241
+        },
+        {
+          "timestamp": 1775835117,
+          "side": "BUY",
+          "price": 0.71,
+          "size": 85.792,
+          "usdcSize": 60.91232,
+          "traderPercent": 0.6091232,
+          "yourSize": 60.91232
+        }
+      ]
+    },
+    {
+      "market": "49104850284632622899464724213962069238178748191343145680035482303540284145930",
+      "outcome": "Yes",
+      "sharesHeld": 1111.1000000000001,
+      "entryPrice": 0.055,
+      "exitPrice": null,
+      "invested": 61.1105,
+      "currentValue": 35.555200000000006,
+      "pnl": -25.555299999999995,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1775826709,
+          "side": "BUY",
+          "price": 0.055,
+          "size": 1111.1000000000001,
+          "usdcSize": 61.1105,
+          "traderPercent": 0.611105,
+          "yourSize": 61.1105
+        }
+      ]
+    },
+    {
+      "market": "32509811268907189614687992216888444066936299378006345784007012748724037421351",
+      "outcome": "No",
+      "sharesHeld": 4.271235298904448,
+      "entryPrice": 0.9293641832418325,
+      "exitPrice": null,
+      "invested": 3.969533105000016,
+      "currentValue": 4.1345557731324005,
+      "pnl": 0.16502266813238453,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1775820221,
+          "side": "BUY",
+          "price": 0.9293641832418325,
+          "size": 4.271235298904448,
+          "usdcSize": 3.969533105000016,
+          "traderPercent": 10.32616544,
+          "yourSize": 3.969533105000016
+        }
+      ]
+    }
+  ]
+}

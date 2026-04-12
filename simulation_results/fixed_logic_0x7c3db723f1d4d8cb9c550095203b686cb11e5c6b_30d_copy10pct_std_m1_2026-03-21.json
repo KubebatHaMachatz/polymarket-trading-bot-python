@@ -1,0 +1,180 @@
+{
+  "id": "sim_0x7c3db7_1774118672978",
+  "name": "FIXED_0x7c3d_30d_copy10pct",
+  "logic": "fixed_percentage",
+  "timestamp": 1774118672978,
+  "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+  "startingCapital": 1000,
+  "currentCapital": 997.3187750377998,
+  "totalTrades": 2000,
+  "copiedTrades": 12,
+  "skippedTrades": 1988,
+  "totalInvested": 999.576579305,
+  "currentValue": 997.3187750377998,
+  "realizedPnl": 0,
+  "unrealizedPnl": -2.6812249622000546,
+  "totalPnl": -2.68122496220019,
+  "roi": -0.268122496220019,
+  "positions": [
+    {
+      "market": "cbb-hawaii-ark-2026-03-19",
+      "outcome": "Hawaii Rainbow Warriors",
+      "sharesHeld": 80.183,
+      "entryPrice": 0.02,
+      "exitPrice": null,
+      "invested": 1.60366,
+      "currentValue": 1.60366,
+      "pnl": 0,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773954941,
+          "side": "BUY",
+          "price": 0.02,
+          "size": 80.183,
+          "usdcSize": 1.60366,
+          "traderPercent": 0.0160366,
+          "yourSize": 1.60366
+        }
+      ]
+    },
+    {
+      "market": "cbb-ndkst-mst-2026-03-19",
+      "outcome": "Michigan State Spartans",
+      "sharesHeld": 900.0870857409868,
+      "entryPrice": 0.994,
+      "exitPrice": null,
+      "invested": 894.664176005,
+      "currentValue": 893.7864761407999,
+      "pnl": -0.8776998642000535,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773954977,
+          "side": "BUY",
+          "price": 0.994,
+          "size": 1.7089999999999999,
+          "usdcSize": 1.6987459999999999,
+          "traderPercent": 0.01698746,
+          "yourSize": 1.6987459999999999
+        },
+        {
+          "timestamp": 1773954989,
+          "side": "BUY",
+          "price": 0.994,
+          "size": 98.29100000000001,
+          "usdcSize": 97.701254,
+          "traderPercent": 0.9770125399999999,
+          "yourSize": 97.701254
+        },
+        {
+          "timestamp": 1773955027,
+          "side": "BUY",
+          "price": 0.9930000069090001,
+          "size": 14.2857141,
+          "usdcSize": 14.185714200000001,
+          "traderPercent": 0.141857142,
+          "yourSize": 14.185714200000001
+        },
+        {
+          "timestamp": 1773955759,
+          "side": "BUY",
+          "price": 0.994000001485,
+          "size": 66.66666649999999,
+          "usdcSize": 66.2666666,
+          "traderPercent": 0.662666666,
+          "yourSize": 66.2666666
+        },
+        {
+          "timestamp": 1773955787,
+          "side": "BUY",
+          "price": 0.994,
+          "size": 1.288,
+          "usdcSize": 1.280272,
+          "traderPercent": 0.01280272,
+          "yourSize": 1.280272
+        },
+        {
+          "timestamp": 1773955807,
+          "side": "BUY",
+          "price": 0.994,
+          "size": 709.7450000000001,
+          "usdcSize": 705.4865300000001,
+          "traderPercent": 7.0548653,
+          "yourSize": 705.4865300000001
+        },
+        {
+          "timestamp": 1773956367,
+          "side": "BUY",
+          "price": 0.993,
+          "size": 8.101705140986716,
+          "usdcSize": 8.044993204999809,
+          "traderPercent": 4.412891999999999,
+          "yourSize": 8.044993204999809
+        }
+      ]
+    },
+    {
+      "market": "us-escorts-commercial-ship-through-hormuz-by-march-31",
+      "outcome": "Yes",
+      "sharesHeld": 24.047,
+      "entryPrice": 0.2,
+      "exitPrice": null,
+      "invested": 4.8094,
+      "currentValue": 3.005875,
+      "pnl": -1.803525,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773955495,
+          "side": "BUY",
+          "price": 0.2,
+          "size": 15.625,
+          "usdcSize": 3.125,
+          "traderPercent": 0.03125,
+          "yourSize": 3.125
+        },
+        {
+          "timestamp": 1773956261,
+          "side": "BUY",
+          "price": 0.2,
+          "size": 8.422,
+          "usdcSize": 1.6844000000000001,
+          "traderPercent": 0.016844,
+          "yourSize": 1.6844000000000001
+        }
+      ]
+    },
+    {
+      "market": "cbb-hawaii-ark-2026-03-19",
+      "outcome": "Arkansas Razorbacks",
+      "sharesHeld": 99.9993332,
+      "entryPrice": 0.9850000133636366,
+      "exitPrice": null,
+      "invested": 98.49934329999999,
+      "currentValue": 98.49934320199999,
+      "pnl": -9.8000001003129e-8,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773955887,
+          "side": "BUY",
+          "price": 0.9850000133636366,
+          "size": 7.3333332,
+          "usdcSize": 7.2233333,
+          "traderPercent": 0.072233333,
+          "yourSize": 7.2233333
+        },
+        {
+          "timestamp": 1773955995,
+          "side": "BUY",
+          "price": 0.985,
+          "size": 92.666,
+          "usdcSize": 91.27601,
+          "traderPercent": 0.9127600999999999,
+          "yourSize": 91.27601
+        }
+      ]
+    }
+  ]
+}

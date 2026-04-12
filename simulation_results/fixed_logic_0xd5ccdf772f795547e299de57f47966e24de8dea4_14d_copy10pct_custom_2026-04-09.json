@@ -1,0 +1,3060 @@
+{
+  "id": "sim_0xd5ccdf_1775764512139",
+  "name": "FIXED_0xd5cc_14d_size$25",
+  "logic": "fixed_size",
+  "timestamp": 1775764512139,
+  "traderAddress": "0xd5ccdf772f795547e299de57f47966e24de8dea4",
+  "startingCapital": 1000,
+  "currentCapital": 1399.432715398418,
+  "totalTrades": 412,
+  "copiedTrades": 319,
+  "skippedTrades": 93,
+  "totalInvested": 1484.9803185306378,
+  "currentValue": 1399.4327153984182,
+  "realizedPnl": 2.3653124583586163,
+  "unrealizedPnl": 63.9271169451152,
+  "totalPnl": 399.43271539841794,
+  "roi": 39.943271539841795,
+  "positions": [
+    {
+      "market": "betmoar-fdv-above-20m-one-day-after-launch",
+      "outcome": "Yes",
+      "sharesHeld": 157.60541093604056,
+      "entryPrice": 0.72,
+      "exitPrice": 0.76009999400036,
+      "invested": 125,
+      "currentValue": 119.7958719069087,
+      "pnl": -5.204128093091299,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774553509,
+          "side": "BUY",
+          "price": 0.72,
+          "size": 34.72222222222222,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774560871,
+          "side": "BUY",
+          "price": 0.6991860465116279,
+          "size": 35.75586229835357,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774592889,
+          "side": "BUY",
+          "price": 0.6990909090909091,
+          "size": 35.76072821846554,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774592905,
+          "side": "BUY",
+          "price": 0.73,
+          "size": 34.24657534246575,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774592905,
+          "side": "BUY",
+          "price": 0.7218812418584455,
+          "size": 34.63173518076022,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774633701,
+          "side": "SELL",
+          "price": 0.76009999400036,
+          "size": 17.51171232622673,
+          "usdcSize": 13.310652434100966,
+          "traderPercent": 10,
+          "yourSize": 13.310652434100966
+        }
+      ]
+    },
+    {
+      "market": "will-russia-enter-lyman-by-april-30",
+      "outcome": "Yes",
+      "sharesHeld": 75.27127105636659,
+      "entryPrice": 0.9912287749169189,
+      "exitPrice": null,
+      "invested": 75,
+      "currentValue": 75.19599978531022,
+      "pnl": 0.1959997853102209,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774556169,
+          "side": "BUY",
+          "price": 0.9912287749169189,
+          "size": 25.221221006316537,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774556197,
+          "side": "BUY",
+          "price": 0.999,
+          "size": 25.025025025025027,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774563385,
+          "side": "BUY",
+          "price": 0.999,
+          "size": 25.025025025025027,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "will-russia-capture-all-of-huliaipole-by-april-30",
+      "outcome": "Yes",
+      "sharesHeld": 28.236907736932437,
+      "entryPrice": 0.717146515782039,
+      "exitPrice": 0.7015177826657187,
+      "invested": 25,
+      "currentValue": 19.80869290494932,
+      "pnl": -5.1913070950506786,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774715617,
+          "side": "BUY",
+          "price": 0.717146515782039,
+          "size": 34.86037992213881,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774717087,
+          "side": "SELL",
+          "price": 0.7298478164249618,
+          "size": 3.4860379922138813,
+          "usdcSize": 2.5442772165917593,
+          "traderPercent": 10,
+          "yourSize": 2.5442772165917593
+        },
+        {
+          "timestamp": 1774717255,
+          "side": "SELL",
+          "price": 0.7015177826657187,
+          "size": 3.1374341929924934,
+          "usdcSize": 2.2009658783277026,
+          "traderPercent": 10,
+          "yourSize": 2.2009658783277026
+        }
+      ]
+    },
+    {
+      "market": "will-russia-capture-all-of-huliaipole-by-march-31",
+      "outcome": "Yes",
+      "sharesHeld": 204.54545454545456,
+      "entryPrice": 0.11,
+      "exitPrice": 0.12219402615108137,
+      "invested": 25,
+      "currentValue": 24.9942326218121,
+      "pnl": -0.005767378187901073,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774715633,
+          "side": "BUY",
+          "price": 0.11,
+          "size": 227.27272727272728,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774716977,
+          "side": "SELL",
+          "price": 0.12219402615108137,
+          "size": 22.72727272727273,
+          "usdcSize": 2.7771369579791223,
+          "traderPercent": 10,
+          "yourSize": 2.7771369579791223
+        }
+      ]
+    },
+    {
+      "market": "major-space-weather-event-this-week-march-29-april-4",
+      "outcome": "Yes",
+      "sharesHeld": 50.33357382568107,
+      "entryPrice": 0.9882217017832636,
+      "exitPrice": null,
+      "invested": 50,
+      "currentValue": 50.26198703244776,
+      "pnl": 0.2619870324477631,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774850560,
+          "side": "BUY",
+          "price": 0.9882217017832636,
+          "size": 25.297966999598426,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774857758,
+          "side": "BUY",
+          "price": 0.9985777526252908,
+          "size": 25.03560682608265,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "will-there-be-exactly-0-earthquakes-of-magnitude-6pt5-or-higher-worldwide-by-april-5",
+      "outcome": "No",
+      "sharesHeld": 22.673307349129058,
+      "entryPrice": 0.8931206942236354,
+      "exitPrice": 0.98,
+      "invested": 25,
+      "currentValue": 22.219841202146476,
+      "pnl": -2.780158797853524,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774860628,
+          "side": "BUY",
+          "price": 0.8931206942236354,
+          "size": 27.991737468060567,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774860758,
+          "side": "SELL",
+          "price": 0.9799999989024969,
+          "size": 2.7991737468060567,
+          "usdcSize": 2.7431902687978336,
+          "traderPercent": 10,
+          "yourSize": 2.7431902687978336
+        },
+        {
+          "timestamp": 1774860834,
+          "side": "SELL",
+          "price": 0.98,
+          "size": 2.519256372125451,
+          "usdcSize": 2.468871244682942,
+          "traderPercent": 10,
+          "yourSize": 2.468871244682942
+        }
+      ]
+    },
+    {
+      "market": "another-7pt0-or-above-earthquake-by-march-31-2026-347",
+      "outcome": "Yes",
+      "sharesHeld": 32.285981987998596,
+      "entryPrice": 0.9,
+      "exitPrice": 0.93,
+      "invested": 75,
+      "currentValue": 30.025963248838696,
+      "pnl": -44.97403675116131,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774861370,
+          "side": "BUY",
+          "price": 0.9,
+          "size": 27.77777777777778,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774861370,
+          "side": "BUY",
+          "price": 0.8999212910906806,
+          "size": 27.78020727757276,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774861372,
+          "side": "BUY",
+          "price": 0.9,
+          "size": 27.77777777777778,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774861408,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 8.333576283312832,
+          "usdcSize": 7.750225943480934,
+          "traderPercent": 10,
+          "yourSize": 7.750225943480934
+        },
+        {
+          "timestamp": 1774861468,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 7.500218654981548,
+          "usdcSize": 6.9752033491328405,
+          "traderPercent": 10,
+          "yourSize": 6.9752033491328405
+        },
+        {
+          "timestamp": 1774861470,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 6.750196789483393,
+          "usdcSize": 6.277683014219556,
+          "traderPercent": 10,
+          "yourSize": 6.277683014219556
+        },
+        {
+          "timestamp": 1774861470,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 6.075177110535053,
+          "usdcSize": 5.6499147127975995,
+          "traderPercent": 10,
+          "yourSize": 5.6499147127975995
+        },
+        {
+          "timestamp": 1774861470,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 5.467659399481548,
+          "usdcSize": 5.084923241517839,
+          "traderPercent": 10,
+          "yourSize": 5.084923241517839
+        },
+        {
+          "timestamp": 1774861470,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 4.920893459533393,
+          "usdcSize": 4.576430917366056,
+          "traderPercent": 10,
+          "yourSize": 4.576430917366056
+        },
+        {
+          "timestamp": 1774861484,
+          "side": "SELL",
+          "price": 0.9299992807025574,
+          "size": 4.428804113580053,
+          "usdcSize": 4.118784640001977,
+          "traderPercent": 10,
+          "yourSize": 4.118784640001977
+        },
+        {
+          "timestamp": 1774861484,
+          "side": "SELL",
+          "price": 0.9299999736170033,
+          "size": 3.9859237022220486,
+          "usdcSize": 3.7069089379058933,
+          "traderPercent": 10,
+          "yourSize": 3.7069089379058933
+        },
+        {
+          "timestamp": 1774861490,
+          "side": "SELL",
+          "price": 0.93,
+          "size": 3.587331331999844,
+          "usdcSize": 3.336218138759855,
+          "traderPercent": 10,
+          "yourSize": 3.336218138759855
+        }
+      ]
+    },
+    {
+      "market": "will-the-iranian-regime-fall-by-april-30",
+      "outcome": "No",
+      "sharesHeld": 0.47669812727038885,
+      "entryPrice": 0.94,
+      "exitPrice": 0.965,
+      "invested": 150,
+      "currentValue": 0.46001369281592525,
+      "pnl": 2.3653124583586163,
+      "closed": true,
+      "trades": [
+        {
+          "timestamp": 1774899937,
+          "side": "BUY",
+          "price": 0.94,
+          "size": 26.595744680851066,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774968759,
+          "side": "BUY",
+          "price": 0.94,
+          "size": 26.595744680851066,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775027639,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 5.319148936170214,
+          "usdcSize": 5.154255319148937,
+          "traderPercent": 10,
+          "yourSize": 5.154255319148937
+        },
+        {
+          "timestamp": 1775028715,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 4.787234042553192,
+          "usdcSize": 4.638829787234043,
+          "traderPercent": 10,
+          "yourSize": 4.638829787234043
+        },
+        {
+          "timestamp": 1775028735,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 4.308510638297872,
+          "usdcSize": 4.174946808510638,
+          "traderPercent": 10,
+          "yourSize": 4.174946808510638
+        },
+        {
+          "timestamp": 1775029793,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 3.877659574468085,
+          "usdcSize": 3.7574521276595743,
+          "traderPercent": 10,
+          "yourSize": 3.7574521276595743
+        },
+        {
+          "timestamp": 1775029809,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 3.4898936170212767,
+          "usdcSize": 3.381706914893617,
+          "traderPercent": 10,
+          "yourSize": 3.381706914893617
+        },
+        {
+          "timestamp": 1775031281,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 3.140904255319149,
+          "usdcSize": 3.043536223404255,
+          "traderPercent": 10,
+          "yourSize": 3.043536223404255
+        },
+        {
+          "timestamp": 1775031305,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 2.826813829787234,
+          "usdcSize": 2.73918260106383,
+          "traderPercent": 10,
+          "yourSize": 2.73918260106383
+        },
+        {
+          "timestamp": 1775031309,
+          "side": "SELL",
+          "price": 0.968,
+          "size": 2.5441324468085105,
+          "usdcSize": 2.462720208510638,
+          "traderPercent": 10,
+          "yourSize": 2.462720208510638
+        },
+        {
+          "timestamp": 1775031333,
+          "side": "SELL",
+          "price": 0.968,
+          "size": 2.2897192021276593,
+          "usdcSize": 2.2164481876595743,
+          "traderPercent": 10,
+          "yourSize": 2.2164481876595743
+        },
+        {
+          "timestamp": 1775031341,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 2.0607472819148933,
+          "usdcSize": 1.9968641161755316,
+          "traderPercent": 10,
+          "yourSize": 1.9968641161755316
+        },
+        {
+          "timestamp": 1775031341,
+          "side": "SELL",
+          "price": 0.968,
+          "size": 1.854672553723404,
+          "usdcSize": 1.795323032004255,
+          "traderPercent": 10,
+          "yourSize": 1.795323032004255
+        },
+        {
+          "timestamp": 1775031347,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.669205298351064,
+          "usdcSize": 1.617459934102181,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 1.617459934102181
+        },
+        {
+          "timestamp": 1775031475,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.502284768515957,
+          "usdcSize": 1.4557139406919624,
+          "traderPercent": 10,
+          "yourSize": 1.4557139406919624
+        },
+        {
+          "timestamp": 1775031475,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.3520562916643613,
+          "usdcSize": 1.310142546622766,
+          "traderPercent": 10,
+          "yourSize": 1.310142546622766
+        },
+        {
+          "timestamp": 1775031629,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.2168506624979252,
+          "usdcSize": 1.1791282919604895,
+          "traderPercent": 10,
+          "yourSize": 1.1791282919604895
+        },
+        {
+          "timestamp": 1775031693,
+          "side": "BUY",
+          "price": 0.955,
+          "size": 26.17801047120419,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775031781,
+          "side": "BUY",
+          "price": 0.951,
+          "size": 26.288117770767613,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775036109,
+          "side": "BUY",
+          "price": 0.969,
+          "size": 25.79979360165119,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775036109,
+          "side": "SELL",
+          "price": 0.9689996996094924,
+          "size": 8.921757780610433,
+          "usdcSize": 8.64518060940016,
+          "traderPercent": 10,
+          "yourSize": 8.64518060940016
+        },
+        {
+          "timestamp": 1775036109,
+          "side": "SELL",
+          "price": 0.9689996996094924,
+          "size": 8.029582002549388,
+          "usdcSize": 7.7806625484601435,
+          "traderPercent": 10,
+          "yourSize": 7.7806625484601435
+        },
+        {
+          "timestamp": 1775036109,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 7.22662380229445,
+          "usdcSize": 7.002598464423321,
+          "traderPercent": 10,
+          "yourSize": 7.002598464423321
+        },
+        {
+          "timestamp": 1775036111,
+          "side": "SELL",
+          "price": 0.9689992121206633,
+          "size": 6.503961422065004,
+          "usdcSize": 6.302333493644178,
+          "traderPercent": 10,
+          "yourSize": 6.302333493644178
+        },
+        {
+          "timestamp": 1775036113,
+          "side": "SELL",
+          "price": 0.9689997396618963,
+          "size": 5.853565279858504,
+          "usdcSize": 5.672103232276806,
+          "traderPercent": 10,
+          "yourSize": 5.672103232276806
+        },
+        {
+          "timestamp": 1775036123,
+          "side": "SELL",
+          "price": 0.9689992121206633,
+          "size": 5.2682087518726535,
+          "usdcSize": 5.104890129851785,
+          "traderPercent": 10,
+          "yourSize": 5.104890129851785
+        },
+        {
+          "timestamp": 1775037377,
+          "side": "SELL",
+          "price": 0.9689999997444655,
+          "size": 4.741387876685388,
+          "usdcSize": 4.594404851296552,
+          "traderPercent": 10,
+          "yourSize": 4.594404851296552
+        },
+        {
+          "timestamp": 1775037397,
+          "side": "SELL",
+          "price": 0.9689999938274699,
+          "size": 4.2672490890168495,
+          "usdcSize": 4.134964340917604,
+          "traderPercent": 10,
+          "yourSize": 4.134964340917604
+        },
+        {
+          "timestamp": 1775037415,
+          "side": "SELL",
+          "price": 0.9689999414723919,
+          "size": 3.840524180115164,
+          "usdcSize": 3.7214677057548995,
+          "traderPercent": 10,
+          "yourSize": 3.7214677057548995
+        },
+        {
+          "timestamp": 1775037569,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 3.4564717621036483,
+          "usdcSize": 3.349321137478435,
+          "traderPercent": 10,
+          "yourSize": 3.349321137478435
+        },
+        {
+          "timestamp": 1775037967,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 3.1108245858932833,
+          "usdcSize": 3.0143890237305913,
+          "traderPercent": 10,
+          "yourSize": 3.0143890237305913
+        },
+        {
+          "timestamp": 1775038047,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 2.799742127303955,
+          "usdcSize": 2.712950121357532,
+          "traderPercent": 10,
+          "yourSize": 2.712950121357532
+        },
+        {
+          "timestamp": 1775038193,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 2.51976791457356,
+          "usdcSize": 2.4416551092217795,
+          "traderPercent": 10,
+          "yourSize": 2.4416551092217795
+        },
+        {
+          "timestamp": 1775038361,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 2.267791123116204,
+          "usdcSize": 2.1974895982996014,
+          "traderPercent": 10,
+          "yourSize": 2.1974895982996014
+        },
+        {
+          "timestamp": 1775038389,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 2.0410120108045833,
+          "usdcSize": 1.9777406384696412,
+          "traderPercent": 10,
+          "yourSize": 1.9777406384696412
+        },
+        {
+          "timestamp": 1775038413,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.836910809724125,
+          "usdcSize": 1.779966574622677,
+          "traderPercent": 10,
+          "yourSize": 1.779966574622677
+        },
+        {
+          "timestamp": 1775038689,
+          "side": "SELL",
+          "price": 0.9689999414723919,
+          "size": 1.6532197287517125,
+          "usdcSize": 1.601969820401413,
+          "traderPercent": 10,
+          "yourSize": 1.601969820401413
+        },
+        {
+          "timestamp": 1775038699,
+          "side": "SELL",
+          "price": 0.968999901462208,
+          "size": 1.4878977558765412,
+          "usdcSize": 1.4417727788302088,
+          "traderPercent": 10,
+          "yourSize": 1.4417727788302088
+        },
+        {
+          "timestamp": 1775038841,
+          "side": "SELL",
+          "price": 0.9689998542909172,
+          "size": 1.3391079802888872,
+          "usdcSize": 1.297595437779736,
+          "traderPercent": 10,
+          "yourSize": 1.297595437779736
+        },
+        {
+          "timestamp": 1775039205,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.2051971822599985,
+          "usdcSize": 1.1678360696099386,
+          "traderPercent": 10,
+          "yourSize": 1.1678360696099386
+        },
+        {
+          "timestamp": 1775039251,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 1.0846774640339987,
+          "usdcSize": 1.0510524626489446,
+          "traderPercent": 10,
+          "yourSize": 1.0510524626489446
+        },
+        {
+          "timestamp": 1775040581,
+          "side": "SELL",
+          "price": 0.9689997296488051,
+          "size": 0.9762097176305988,
+          "usdcSize": 0.9459469524645866,
+          "traderPercent": 10,
+          "yourSize": 0.9459469524645866
+        },
+        {
+          "timestamp": 1775040597,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 0.8785887458675389,
+          "usdcSize": 0.8513524947456451,
+          "traderPercent": 10,
+          "yourSize": 0.8513524947456451
+        },
+        {
+          "timestamp": 1775040669,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 0.790729871280785,
+          "usdcSize": 0.7662172452710806,
+          "traderPercent": 10,
+          "yourSize": 0.7662172452710806
+        },
+        {
+          "timestamp": 1775040819,
+          "side": "SELL",
+          "price": 0.9689991476380602,
+          "size": 0.7116568841527064,
+          "usdcSize": 0.6895949141547303,
+          "traderPercent": 10,
+          "yourSize": 0.6895949141547303
+        },
+        {
+          "timestamp": 1775040821,
+          "side": "SELL",
+          "price": 0.9689999938274699,
+          "size": 0.6404911957374358,
+          "usdcSize": 0.6206359647161241,
+          "traderPercent": 10,
+          "yourSize": 0.6206359647161241
+        },
+        {
+          "timestamp": 1775040821,
+          "side": "SELL",
+          "price": 0.9689996996094924,
+          "size": 0.5764420761636923,
+          "usdcSize": 0.5585721986448899,
+          "traderPercent": 10,
+          "yourSize": 0.5585721986448899
+        },
+        {
+          "timestamp": 1775040821,
+          "side": "SELL",
+          "price": 0.9689997296488051,
+          "size": 0.518797868547323,
+          "usdcSize": 0.5027149943647323,
+          "traderPercent": 10,
+          "yourSize": 0.5027149943647323
+        },
+        {
+          "timestamp": 1775040823,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 0.46691808169259064,
+          "usdcSize": 0.4524436211601203,
+          "traderPercent": 10,
+          "yourSize": 0.4524436211601203
+        },
+        {
+          "timestamp": 1775040823,
+          "side": "SELL",
+          "price": 0.9689999354645785,
+          "size": 0.42022627352333153,
+          "usdcSize": 0.4071992319246286,
+          "traderPercent": 10,
+          "yourSize": 0.4071992319246286
+        },
+        {
+          "timestamp": 1775040847,
+          "side": "SELL",
+          "price": 0.969,
+          "size": 0.3782036461709984,
+          "usdcSize": 0.36647933313969744,
+          "traderPercent": 10,
+          "yourSize": 0.36647933313969744
+        },
+        {
+          "timestamp": 1775044101,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.3403832815538985,
+          "usdcSize": 0.32881024998106595,
+          "traderPercent": 10,
+          "yourSize": 0.32881024998106595
+        },
+        {
+          "timestamp": 1775044107,
+          "side": "SELL",
+          "price": 0.9659996425794174,
+          "size": 0.3063449533985087,
+          "usdcSize": 0.29592911548896766,
+          "traderPercent": 10,
+          "yourSize": 0.29592911548896766
+        },
+        {
+          "timestamp": 1775044237,
+          "side": "SELL",
+          "price": 0.9659996425794174,
+          "size": 0.2757104580586578,
+          "usdcSize": 0.2663362039400709,
+          "traderPercent": 10,
+          "yourSize": 0.2663362039400709
+        },
+        {
+          "timestamp": 1775044271,
+          "side": "SELL",
+          "price": 0.9659998817615671,
+          "size": 0.248139412252792,
+          "usdcSize": 0.23970264289658186,
+          "traderPercent": 10,
+          "yourSize": 0.23970264289658186
+        },
+        {
+          "timestamp": 1775044597,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.22332547102751282,
+          "usdcSize": 0.21573240501257737,
+          "traderPercent": 10,
+          "yourSize": 0.21573240501257737
+        },
+        {
+          "timestamp": 1775044597,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.20099292392476154,
+          "usdcSize": 0.19415916451131965,
+          "traderPercent": 10,
+          "yourSize": 0.19415916451131965
+        },
+        {
+          "timestamp": 1775044665,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.18089363153228538,
+          "usdcSize": 0.17474324806018768,
+          "traderPercent": 10,
+          "yourSize": 0.17474324806018768
+        },
+        {
+          "timestamp": 1775044839,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.16280426837905684,
+          "usdcSize": 0.1572689232541689,
+          "traderPercent": 10,
+          "yourSize": 0.1572689232541689
+        },
+        {
+          "timestamp": 1775044839,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.14652384154115114,
+          "usdcSize": 0.141542030928752,
+          "traderPercent": 10,
+          "yourSize": 0.141542030928752
+        },
+        {
+          "timestamp": 1775044903,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.13187145738703604,
+          "usdcSize": 0.12738782783587682,
+          "traderPercent": 10,
+          "yourSize": 0.12738782783587682
+        },
+        {
+          "timestamp": 1775044947,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.11868431164833243,
+          "usdcSize": 0.11464904505228912,
+          "traderPercent": 10,
+          "yourSize": 0.11464904505228912
+        },
+        {
+          "timestamp": 1775044993,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.10681588048349917,
+          "usdcSize": 0.1031841405470602,
+          "traderPercent": 10,
+          "yourSize": 0.1031841405470602
+        },
+        {
+          "timestamp": 1775045037,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.09613429243514926,
+          "usdcSize": 0.09286572649235418,
+          "traderPercent": 10,
+          "yourSize": 0.09286572649235418
+        },
+        {
+          "timestamp": 1775045073,
+          "side": "SELL",
+          "price": 0.9659999993267273,
+          "size": 0.08652086319163432,
+          "usdcSize": 0.08357915378486662,
+          "traderPercent": 10,
+          "yourSize": 0.08357915378486662
+        },
+        {
+          "timestamp": 1775045083,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0778687768724709,
+          "usdcSize": 0.07522123845880689,
+          "traderPercent": 10,
+          "yourSize": 0.07522123845880689
+        },
+        {
+          "timestamp": 1775045091,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.07008189918522381,
+          "usdcSize": 0.0676991146129262,
+          "traderPercent": 10,
+          "yourSize": 0.0676991146129262
+        },
+        {
+          "timestamp": 1775045129,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.06307370926670143,
+          "usdcSize": 0.06092920315163358,
+          "traderPercent": 10,
+          "yourSize": 0.06092920315163358
+        },
+        {
+          "timestamp": 1775045155,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.05676633834003129,
+          "usdcSize": 0.05483628283647022,
+          "traderPercent": 10,
+          "yourSize": 0.05483628283647022
+        },
+        {
+          "timestamp": 1775045161,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.05108970450602816,
+          "usdcSize": 0.0493526545528232,
+          "traderPercent": 10,
+          "yourSize": 0.0493526545528232
+        },
+        {
+          "timestamp": 1775045221,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.04598073405542534,
+          "usdcSize": 0.04441738909754088,
+          "traderPercent": 10,
+          "yourSize": 0.04441738909754088
+        },
+        {
+          "timestamp": 1775045281,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0413826606498828,
+          "usdcSize": 0.03997565018778679,
+          "traderPercent": 10,
+          "yourSize": 0.03997565018778679
+        },
+        {
+          "timestamp": 1775045343,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.03724439458489453,
+          "usdcSize": 0.03597808516900811,
+          "traderPercent": 10,
+          "yourSize": 0.03597808516900811
+        },
+        {
+          "timestamp": 1775045403,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.03351995512640507,
+          "usdcSize": 0.0323802766521073,
+          "traderPercent": 10,
+          "yourSize": 0.0323802766521073
+        },
+        {
+          "timestamp": 1775045403,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.03016795961376456,
+          "usdcSize": 0.029142248986896564,
+          "traderPercent": 10,
+          "yourSize": 0.029142248986896564
+        },
+        {
+          "timestamp": 1775045463,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.027151163652388108,
+          "usdcSize": 0.02622802408820691,
+          "traderPercent": 10,
+          "yourSize": 0.02622802408820691
+        },
+        {
+          "timestamp": 1775045523,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.024436047287149293,
+          "usdcSize": 0.023605221679386217,
+          "traderPercent": 10,
+          "yourSize": 0.023605221679386217
+        },
+        {
+          "timestamp": 1775045583,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.021992442558434366,
+          "usdcSize": 0.021244699511447595,
+          "traderPercent": 10,
+          "yourSize": 0.021244699511447595
+        },
+        {
+          "timestamp": 1775045643,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.01979319830259093,
+          "usdcSize": 0.019120229560302838,
+          "traderPercent": 10,
+          "yourSize": 0.019120229560302838
+        },
+        {
+          "timestamp": 1775045705,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.017813878472331835,
+          "usdcSize": 0.017208206604272552,
+          "traderPercent": 10,
+          "yourSize": 0.017208206604272552
+        },
+        {
+          "timestamp": 1775045747,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.01603249062509865,
+          "usdcSize": 0.015487385943845295,
+          "traderPercent": 10,
+          "yourSize": 0.015487385943845295
+        },
+        {
+          "timestamp": 1775045765,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.014429241562588785,
+          "usdcSize": 0.013938647349460766,
+          "traderPercent": 10,
+          "yourSize": 0.013938647349460766
+        },
+        {
+          "timestamp": 1775045801,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.012986317406329906,
+          "usdcSize": 0.012544782614514688,
+          "traderPercent": 10,
+          "yourSize": 0.012544782614514688
+        },
+        {
+          "timestamp": 1775045825,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.011687685665696916,
+          "usdcSize": 0.01129030435306322,
+          "traderPercent": 10,
+          "yourSize": 0.01129030435306322
+        },
+        {
+          "timestamp": 1775045865,
+          "side": "SELL",
+          "price": 0.9659999083373216,
+          "size": 0.010518917099127223,
+          "usdcSize": 0.010161272953564783,
+          "traderPercent": 10,
+          "yourSize": 0.010161272953564783
+        },
+        {
+          "timestamp": 1775045885,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.009467025389214501,
+          "usdcSize": 0.009145146525981208,
+          "traderPercent": 10,
+          "yourSize": 0.009145146525981208
+        },
+        {
+          "timestamp": 1775045885,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.008520322850293052,
+          "usdcSize": 0.008230631873383087,
+          "traderPercent": 10,
+          "yourSize": 0.008230631873383087
+        },
+        {
+          "timestamp": 1775045885,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.007668290565263746,
+          "usdcSize": 0.007407568686044778,
+          "traderPercent": 10,
+          "yourSize": 0.007407568686044778
+        },
+        {
+          "timestamp": 1775045945,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.006901461508737371,
+          "usdcSize": 0.0066668118174403,
+          "traderPercent": 10,
+          "yourSize": 0.0066668118174403
+        },
+        {
+          "timestamp": 1775045983,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.006211315357863634,
+          "usdcSize": 0.00600013063569627,
+          "traderPercent": 10,
+          "yourSize": 0.00600013063569627
+        },
+        {
+          "timestamp": 1775046005,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00559018382207727,
+          "usdcSize": 0.005400117572126643,
+          "traderPercent": 10,
+          "yourSize": 0.005400117572126643
+        },
+        {
+          "timestamp": 1775046067,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.005031165439869543,
+          "usdcSize": 0.004860105814913978,
+          "traderPercent": 10,
+          "yourSize": 0.004860105814913978
+        },
+        {
+          "timestamp": 1775046127,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.004528048895882589,
+          "usdcSize": 0.004374095233422581,
+          "traderPercent": 10,
+          "yourSize": 0.004374095233422581
+        },
+        {
+          "timestamp": 1775046129,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00407524400629433,
+          "usdcSize": 0.003936685710080322,
+          "traderPercent": 10,
+          "yourSize": 0.003936685710080322
+        },
+        {
+          "timestamp": 1775046183,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0036677196056648965,
+          "usdcSize": 0.00354301713907229,
+          "traderPercent": 10,
+          "yourSize": 0.00354301713907229
+        },
+        {
+          "timestamp": 1775046187,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.003300947645098407,
+          "usdcSize": 0.0031887154251650607,
+          "traderPercent": 10,
+          "yourSize": 0.0031887154251650607
+        },
+        {
+          "timestamp": 1775046247,
+          "side": "SELL",
+          "price": 0.9659999991937894,
+          "size": 0.002970852880588566,
+          "usdcSize": 0.0028698438802534218,
+          "traderPercent": 10,
+          "yourSize": 0.0028698438802534218
+        },
+        {
+          "timestamp": 1775046247,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0026737675925297094,
+          "usdcSize": 0.002582859494383699,
+          "traderPercent": 10,
+          "yourSize": 0.002582859494383699
+        },
+        {
+          "timestamp": 1775046269,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0024063908332767384,
+          "usdcSize": 0.0023245735449453292,
+          "traderPercent": 10,
+          "yourSize": 0.0023245735449453292
+        },
+        {
+          "timestamp": 1775046307,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0021657517499490647,
+          "usdcSize": 0.0020921161904507964,
+          "traderPercent": 10,
+          "yourSize": 0.0020921161904507964
+        },
+        {
+          "timestamp": 1775046307,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.001949176574954158,
+          "usdcSize": 0.0018829045714057165,
+          "traderPercent": 10,
+          "yourSize": 0.0018829045714057165
+        },
+        {
+          "timestamp": 1775046333,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0017542589174587423,
+          "usdcSize": 0.001694614114265145,
+          "traderPercent": 10,
+          "yourSize": 0.001694614114265145
+        },
+        {
+          "timestamp": 1775046367,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.001578833025712868,
+          "usdcSize": 0.0015251527028386305,
+          "traderPercent": 10,
+          "yourSize": 0.0015251527028386305
+        },
+        {
+          "timestamp": 1775046405,
+          "side": "SELL",
+          "price": 0.9659996425794174,
+          "size": 0.0014209497231415812,
+          "usdcSize": 0.0013726369246780895,
+          "traderPercent": 10,
+          "yourSize": 0.0013726369246780895
+        },
+        {
+          "timestamp": 1775046427,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.001278854750827423,
+          "usdcSize": 0.0012353736892992907,
+          "traderPercent": 10,
+          "yourSize": 0.0012353736892992907
+        },
+        {
+          "timestamp": 1775046593,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.001150969275744681,
+          "usdcSize": 0.0011118363203693618,
+          "traderPercent": 10,
+          "yourSize": 0.0011118363203693618
+        },
+        {
+          "timestamp": 1775047147,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.001035872348170213,
+          "usdcSize": 0.0010006526883324257,
+          "traderPercent": 10,
+          "yourSize": 0.0010006526883324257
+        },
+        {
+          "timestamp": 1775047259,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0009322851133531916,
+          "usdcSize": 0.000900587419499183,
+          "traderPercent": 10,
+          "yourSize": 0.000900587419499183
+        },
+        {
+          "timestamp": 1775047259,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0008390566020178724,
+          "usdcSize": 0.0008105286775492648,
+          "traderPercent": 10,
+          "yourSize": 0.0008105286775492648
+        },
+        {
+          "timestamp": 1775047259,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0007551509418160852,
+          "usdcSize": 0.0007294758097943383,
+          "traderPercent": 10,
+          "yourSize": 0.0007294758097943383
+        },
+        {
+          "timestamp": 1775047315,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0006796358476344767,
+          "usdcSize": 0.0006565282288149044,
+          "traderPercent": 10,
+          "yourSize": 0.0006565282288149044
+        },
+        {
+          "timestamp": 1775047583,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0006116722628710289,
+          "usdcSize": 0.000590875405933414,
+          "traderPercent": 10,
+          "yourSize": 0.000590875405933414
+        },
+        {
+          "timestamp": 1775047783,
+          "side": "SELL",
+          "price": 0.9659999849303987,
+          "size": 0.0005505050365839261,
+          "usdcSize": 0.0005317878570441812,
+          "traderPercent": 10,
+          "yourSize": 0.0005317878570441812
+        },
+        {
+          "timestamp": 1775047907,
+          "side": "SELL",
+          "price": 0.9659999849303987,
+          "size": 0.0004954545329255336,
+          "usdcSize": 0.00047860907133976316,
+          "traderPercent": 10,
+          "yourSize": 0.00047860907133976316
+        },
+        {
+          "timestamp": 1775048001,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00044590907963298014,
+          "usdcSize": 0.0004307481709254588,
+          "traderPercent": 10,
+          "yourSize": 0.0004307481709254588
+        },
+        {
+          "timestamp": 1775048001,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0004013181716696821,
+          "usdcSize": 0.0003876733538329129,
+          "traderPercent": 10,
+          "yourSize": 0.0003876733538329129
+        },
+        {
+          "timestamp": 1775048001,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0003611863545027139,
+          "usdcSize": 0.0003489060184496216,
+          "traderPercent": 10,
+          "yourSize": 0.0003489060184496216
+        },
+        {
+          "timestamp": 1775048073,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0003250677190524425,
+          "usdcSize": 0.0003140154166046594,
+          "traderPercent": 10,
+          "yourSize": 0.0003140154166046594
+        },
+        {
+          "timestamp": 1775048073,
+          "side": "SELL",
+          "price": 0.9659998691424261,
+          "size": 0.0002925609471471982,
+          "usdcSize": 0.0002826138366603777,
+          "traderPercent": 10,
+          "yourSize": 0.0002826138366603777
+        },
+        {
+          "timestamp": 1775048075,
+          "side": "SELL",
+          "price": 0.9659999994230833,
+          "size": 0.0002633048524324784,
+          "usdcSize": 0.00025435248729786916,
+          "traderPercent": 10,
+          "yourSize": 0.00025435248729786916
+        },
+        {
+          "timestamp": 1775048195,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00023697436718923056,
+          "usdcSize": 0.0002289172387047967,
+          "traderPercent": 10,
+          "yourSize": 0.0002289172387047967
+        },
+        {
+          "timestamp": 1775048223,
+          "side": "SELL",
+          "price": 0.9659997463628833,
+          "size": 0.0002132769304703075,
+          "usdcSize": 0.00020602546073937136,
+          "traderPercent": 10,
+          "yourSize": 0.00020602546073937136
+        },
+        {
+          "timestamp": 1775048483,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00019194923742327675,
+          "usdcSize": 0.00018542296335088534,
+          "traderPercent": 10,
+          "yourSize": 0.00018542296335088534
+        },
+        {
+          "timestamp": 1775048791,
+          "side": "SELL",
+          "price": 0.9659999854252629,
+          "size": 0.0001727543136809491,
+          "usdcSize": 0.00016688066449794812,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 0.00016688066449794812
+        },
+        {
+          "timestamp": 1775048791,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00015547888231285417,
+          "usdcSize": 0.00015019260031421712,
+          "traderPercent": 10,
+          "yourSize": 0.00015019260031421712
+        },
+        {
+          "timestamp": 1775048855,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00013993099408156874,
+          "usdcSize": 0.0001351733402827954,
+          "traderPercent": 10,
+          "yourSize": 0.0001351733402827954
+        },
+        {
+          "timestamp": 1775048855,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00012593789467341186,
+          "usdcSize": 0.00012165600625451586,
+          "traderPercent": 10,
+          "yourSize": 0.00012165600625451586
+        },
+        {
+          "timestamp": 1775049165,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00011334410520607067,
+          "usdcSize": 0.00010949040562906426,
+          "traderPercent": 10,
+          "yourSize": 0.00010949040562906426
+        },
+        {
+          "timestamp": 1775049185,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0001020096946854636,
+          "usdcSize": 0.00009854136506615784,
+          "traderPercent": 10,
+          "yourSize": 0.00009854136506615784
+        },
+        {
+          "timestamp": 1775049379,
+          "side": "SELL",
+          "price": 0.9659998817615671,
+          "size": 0.00009180872521691725,
+          "usdcSize": 0.00008868721770422227,
+          "traderPercent": 10,
+          "yourSize": 0.00008868721770422227
+        },
+        {
+          "timestamp": 1775049389,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00008262785269522552,
+          "usdcSize": 0.00007981850570358785,
+          "traderPercent": 10,
+          "yourSize": 0.00007981850570358785
+        },
+        {
+          "timestamp": 1775049481,
+          "side": "SELL",
+          "price": 0.9659996425794174,
+          "size": 0.00007436506742570297,
+          "usdcSize": 0.00007183662855362334,
+          "traderPercent": 10,
+          "yourSize": 0.00007183662855362334
+        },
+        {
+          "timestamp": 1775049511,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00006692856068313267,
+          "usdcSize": 0.00006465298961990617,
+          "traderPercent": 10,
+          "yourSize": 0.00006465298961990617
+        },
+        {
+          "timestamp": 1775049533,
+          "side": "SELL",
+          "price": 0.9659997510919359,
+          "size": 0.0000602357046148194,
+          "usdcSize": 0.00005818767566476292,
+          "traderPercent": 10,
+          "yourSize": 0.00005818767566476292
+        },
+        {
+          "timestamp": 1775049857,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00005421213415333746,
+          "usdcSize": 0.00005236892159212399,
+          "traderPercent": 10,
+          "yourSize": 0.00005236892159212399
+        },
+        {
+          "timestamp": 1775049859,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000048790920738003715,
+          "usdcSize": 0.00004713202943291159,
+          "traderPercent": 10,
+          "yourSize": 0.00004713202943291159
+        },
+        {
+          "timestamp": 1775049913,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000043911828664203344,
+          "usdcSize": 0.00004241882648962043,
+          "traderPercent": 10,
+          "yourSize": 0.00004241882648962043
+        },
+        {
+          "timestamp": 1775049973,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00003952064579778301,
+          "usdcSize": 0.00003817694384065838,
+          "traderPercent": 10,
+          "yourSize": 0.00003817694384065838
+        },
+        {
+          "timestamp": 1775050111,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00003556858121800471,
+          "usdcSize": 0.00003435924945659255,
+          "traderPercent": 10,
+          "yourSize": 0.00003435924945659255
+        },
+        {
+          "timestamp": 1775050165,
+          "side": "SELL",
+          "price": 0.9659999869010396,
+          "size": 0.00003201172309620425,
+          "usdcSize": 0.00003092332409161301,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 0.00003092332409161301
+        },
+        {
+          "timestamp": 1775050541,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000028810550786583812,
+          "usdcSize": 0.00002783099205983996,
+          "traderPercent": 10,
+          "yourSize": 0.00002783099205983996
+        },
+        {
+          "timestamp": 1775051171,
+          "side": "SELL",
+          "price": 0.9659999597792708,
+          "size": 0.000025929495707925434,
+          "usdcSize": 0.000025047891810952742,
+          "traderPercent": 10,
+          "yourSize": 0.000025047891810952742
+        },
+        {
+          "timestamp": 1775051247,
+          "side": "SELL",
+          "price": 0.9659999816459967,
+          "size": 0.000023336546137132888,
+          "usdcSize": 0.000022543103140151324,
+          "traderPercent": 10,
+          "yourSize": 0.000022543103140151324
+        },
+        {
+          "timestamp": 1775051319,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000210028915234196,
+          "usdcSize": 0.00002028879321162333,
+          "traderPercent": 10,
+          "yourSize": 0.00002028879321162333
+        },
+        {
+          "timestamp": 1775051391,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00001890260237107764,
+          "usdcSize": 0.000018259913890461,
+          "traderPercent": 10,
+          "yourSize": 0.000018259913890461
+        },
+        {
+          "timestamp": 1775051411,
+          "side": "SELL",
+          "price": 0.9659999027987448,
+          "size": 0.000017012342133969876,
+          "usdcSize": 0.00001643392084779389,
+          "traderPercent": 10,
+          "yourSize": 0.00001643392084779389
+        },
+        {
+          "timestamp": 1775051507,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00001531110792057289,
+          "usdcSize": 0.00001479053025127341,
+          "traderPercent": 10,
+          "yourSize": 0.00001479053025127341
+        },
+        {
+          "timestamp": 1775051571,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000013779997128515598,
+          "usdcSize": 0.000013311477226146067,
+          "traderPercent": 10,
+          "yourSize": 0.000013311477226146067
+        },
+        {
+          "timestamp": 1775051601,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00001240199741566404,
+          "usdcSize": 0.000011980329503531463,
+          "traderPercent": 10,
+          "yourSize": 0.000011980329503531463
+        },
+        {
+          "timestamp": 1775051679,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000011161797674097636,
+          "usdcSize": 0.000010782296553178316,
+          "traderPercent": 10,
+          "yourSize": 0.000010782296553178316
+        },
+        {
+          "timestamp": 1775051835,
+          "side": "SELL",
+          "price": 0.9659999968894799,
+          "size": 0.000010045617906687872,
+          "usdcSize": 0.000009704066866613389,
+          "traderPercent": 10,
+          "yourSize": 0.000009704066866613389
+        },
+        {
+          "timestamp": 1775051875,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000009041056116019086,
+          "usdcSize": 0.000008733660208074436,
+          "traderPercent": 10,
+          "yourSize": 0.000008733660208074436
+        },
+        {
+          "timestamp": 1775051891,
+          "side": "SELL",
+          "price": 0.9659996425794174,
+          "size": 0.000008136950504417177,
+          "usdcSize": 0.000007860291278953403,
+          "traderPercent": 10,
+          "yourSize": 0.000007860291278953403
+        },
+        {
+          "timestamp": 1775051903,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000007323255453975459,
+          "usdcSize": 0.000007074264768540293,
+          "traderPercent": 10,
+          "yourSize": 0.000007074264768540293
+        },
+        {
+          "timestamp": 1775051903,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000006590929908577913,
+          "usdcSize": 0.000006366838291686264,
+          "traderPercent": 10,
+          "yourSize": 0.000006366838291686264
+        },
+        {
+          "timestamp": 1775052255,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000005931836917720122,
+          "usdcSize": 0.000005730154462517637,
+          "traderPercent": 10,
+          "yourSize": 0.000005730154462517637
+        },
+        {
+          "timestamp": 1775053475,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000053386532259481105,
+          "usdcSize": 0.0000051571390162658745,
+          "traderPercent": 10,
+          "yourSize": 0.0000051571390162658745
+        },
+        {
+          "timestamp": 1775053485,
+          "side": "SELL",
+          "price": 0.9659999865725996,
+          "size": 0.000004804787903353299,
+          "usdcSize": 0.0000046414250501234756,
+          "traderPercent": 10,
+          "yourSize": 0.0000046414250501234756
+        },
+        {
+          "timestamp": 1775053493,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000004324309113017969,
+          "usdcSize": 0.000004177282603175357,
+          "traderPercent": 10,
+          "yourSize": 0.000004177282603175357
+        },
+        {
+          "timestamp": 1775053871,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000003891878201716172,
+          "usdcSize": 0.000003759554342857822,
+          "traderPercent": 10,
+          "yourSize": 0.000003759554342857822
+        },
+        {
+          "timestamp": 1775053893,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000035026903815445555,
+          "usdcSize": 0.0000033835989085720403,
+          "traderPercent": 10,
+          "yourSize": 0.0000033835989085720403
+        },
+        {
+          "timestamp": 1775054111,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000031524213433901,
+          "usdcSize": 0.0000030452390177148366,
+          "traderPercent": 10,
+          "yourSize": 0.0000030452390177148366
+        },
+        {
+          "timestamp": 1775054213,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.00000283717920905109,
+          "usdcSize": 0.000002740715115943353,
+          "traderPercent": 10,
+          "yourSize": 0.000002740715115943353
+        },
+        {
+          "timestamp": 1775054213,
+          "side": "SELL",
+          "price": 0.9659999567934486,
+          "size": 0.000002553461288145981,
+          "usdcSize": 0.0000024666434940227613,
+          "traderPercent": 10,
+          "yourSize": 0.0000024666434940227613
+        },
+        {
+          "timestamp": 1775054483,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.000002298115159331383,
+          "usdcSize": 0.000002219979243914116,
+          "traderPercent": 10,
+          "yourSize": 0.000002219979243914116
+        },
+        {
+          "timestamp": 1775054483,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000020683036433982448,
+          "usdcSize": 0.0000019979813195227043,
+          "traderPercent": 10,
+          "yourSize": 0.0000019979813195227043
+        },
+        {
+          "timestamp": 1775054583,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000018614732790584203,
+          "usdcSize": 0.000001798183187570434,
+          "traderPercent": 10,
+          "yourSize": 0.000001798183187570434
+        },
+        {
+          "timestamp": 1775054671,
+          "side": "SELL",
+          "price": 0.9659999998622725,
+          "size": 0.0000016753259511525783,
+          "usdcSize": 0.000001618364868582652,
+          "traderPercent": 10,
+          "yourSize": 0.000001618364868582652
+        },
+        {
+          "timestamp": 1775054809,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000015077933560373205,
+          "usdcSize": 0.0000014565283819320516,
+          "traderPercent": 10,
+          "yourSize": 0.0000014565283819320516
+        },
+        {
+          "timestamp": 1775054855,
+          "side": "SELL",
+          "price": 0.9659999669241585,
+          "size": 0.0000013570140204335887,
+          "usdcSize": 0.000001310875498854466,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 0.000001310875498854466
+        },
+        {
+          "timestamp": 1775055011,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000012213126183902297,
+          "usdcSize": 0.0000011797879893649618,
+          "traderPercent": 10,
+          "yourSize": 0.0000011797879893649618
+        },
+        {
+          "timestamp": 1775055031,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 0.0000010991813565512066,
+          "usdcSize": 0.0000010618091904284655,
+          "traderPercent": 10,
+          "yourSize": 0.0000010618091904284655
+        },
+        {
+          "timestamp": 1775055123,
+          "side": "SELL",
+          "price": 0.9659996425794174,
+          "size": 9.89263220896086e-7,
+          "usdcSize": 9.556279178025823e-7,
+          "traderPercent": 10,
+          "yourSize": 9.556279178025823e-7
+        },
+        {
+          "timestamp": 1775055155,
+          "side": "SELL",
+          "price": 0.9659999995834185,
+          "size": 8.903368988064774e-7,
+          "usdcSize": 8.600654438761594e-7,
+          "traderPercent": 10,
+          "yourSize": 8.600654438761594e-7
+        },
+        {
+          "timestamp": 1775055155,
+          "side": "SELL",
+          "price": 0.96599999993652,
+          "size": 8.013032089258296e-7,
+          "usdcSize": 7.740588997714846e-7,
+          "traderPercent": 10,
+          "yourSize": 7.740588997714846e-7
+        },
+        {
+          "timestamp": 1775055215,
+          "side": "SELL",
+          "price": 0.9659996031348324,
+          "size": 7.211728880332467e-7,
+          "usdcSize": 6.966527236317171e-7,
+          "traderPercent": 10,
+          "yourSize": 6.966527236317171e-7
+        },
+        {
+          "timestamp": 1775055493,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 6.490555992299219e-7,
+          "usdcSize": 6.269877088561045e-7,
+          "traderPercent": 10,
+          "yourSize": 6.269877088561045e-7
+        },
+        {
+          "timestamp": 1775055711,
+          "side": "SELL",
+          "price": 0.9659999816459967,
+          "size": 5.841500393069298e-7,
+          "usdcSize": 5.642889272490024e-7,
+          "traderPercent": 10,
+          "yourSize": 5.642889272490024e-7
+        },
+        {
+          "timestamp": 1775055799,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 5.257350353762367e-7,
+          "usdcSize": 5.078600441734447e-7,
+          "traderPercent": 10,
+          "yourSize": 5.078600441734447e-7
+        },
+        {
+          "timestamp": 1775055891,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 4.731615318386131e-7,
+          "usdcSize": 4.5707403975610024e-7,
+          "traderPercent": 10,
+          "yourSize": 4.5707403975610024e-7
+        },
+        {
+          "timestamp": 1775056033,
+          "side": "SELL",
+          "price": 0.9659999903399986,
+          "size": 4.258453786547518e-7,
+          "usdcSize": 4.1136663166682326e-7,
+          "traderPercent": 10,
+          "yourSize": 4.1136663166682326e-7
+        },
+        {
+          "timestamp": 1775056501,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 3.832608407892766e-7,
+          "usdcSize": 3.702299722024412e-7,
+          "traderPercent": 10,
+          "yourSize": 3.702299722024412e-7
+        },
+        {
+          "timestamp": 1775056663,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 3.4493475671034893e-7,
+          "usdcSize": 3.3320697498219705e-7,
+          "traderPercent": 10,
+          "yourSize": 3.3320697498219705e-7
+        },
+        {
+          "timestamp": 1775056813,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 3.1044128103931404e-7,
+          "usdcSize": 2.9988627748397733e-7,
+          "traderPercent": 10,
+          "yourSize": 2.9988627748397733e-7
+        },
+        {
+          "timestamp": 1775056829,
+          "side": "SELL",
+          "price": 0.9659999849303987,
+          "size": 2.7939715293538263e-7,
+          "usdcSize": 2.698976455251759e-7,
+          "traderPercent": 10,
+          "yourSize": 2.698976455251759e-7
+        },
+        {
+          "timestamp": 1775056865,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 2.514574376418444e-7,
+          "usdcSize": 2.4290788476202165e-7,
+          "traderPercent": 10,
+          "yourSize": 2.4290788476202165e-7
+        },
+        {
+          "timestamp": 1775056921,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 2.263116938776599e-7,
+          "usdcSize": 2.1861709628581947e-7,
+          "traderPercent": 10,
+          "yourSize": 2.1861709628581947e-7
+        },
+        {
+          "timestamp": 1775056955,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 2.0368052448989392e-7,
+          "usdcSize": 1.9675538665723752e-7,
+          "traderPercent": 10,
+          "yourSize": 1.9675538665723752e-7
+        },
+        {
+          "timestamp": 1775057057,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 1.8331247204090453e-7,
+          "usdcSize": 1.7707984799151376e-7,
+          "traderPercent": 10,
+          "yourSize": 1.7707984799151376e-7
+        },
+        {
+          "timestamp": 1775057063,
+          "side": "SELL",
+          "price": 0.9659999990581499,
+          "size": 1.6498122483681408e-7,
+          "usdcSize": 1.5937186303697483e-7,
+          "traderPercent": 10,
+          "yourSize": 1.5937186303697483e-7
+        },
+        {
+          "timestamp": 1775057115,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 1.484831023531327e-7,
+          "usdcSize": 1.4343467687312617e-7,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 1.4343467687312617e-7
+        },
+        {
+          "timestamp": 1775057287,
+          "side": "SELL",
+          "price": 0.9659999968894799,
+          "size": 1.3363479211781938e-7,
+          "usdcSize": 1.2909120877013981e-7,
+          "traderPercent": 10,
+          "yourSize": 1.2909120877013981e-7
+        },
+        {
+          "timestamp": 1775057717,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 1.2027131290603742e-7,
+          "usdcSize": 1.1618208826723215e-7,
+          "traderPercent": 10,
+          "yourSize": 1.1618208826723215e-7
+        },
+        {
+          "timestamp": 1775057717,
+          "side": "SELL",
+          "price": 0.966,
+          "size": 1.0824418161543371e-7,
+          "usdcSize": 1.0456387944050897e-7,
+          "traderPercent": 10,
+          "yourSize": 1.0456387944050897e-7
+        },
+        {
+          "timestamp": 1775330349,
+          "side": "BUY",
+          "price": 0.957,
+          "size": 26.12330198537095,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775335307,
+          "side": "SELL",
+          "price": 0.964,
+          "size": 2.612330295956858,
+          "usdcSize": 2.518286405302411,
+          "traderPercent": 10,
+          "yourSize": 2.518286405302411
+        },
+        {
+          "timestamp": 1775335337,
+          "side": "SELL",
+          "price": 0.964,
+          "size": 2.3510972663611724,
+          "usdcSize": 2.26645776477217,
+          "traderPercent": 10,
+          "yourSize": 2.26645776477217
+        },
+        {
+          "timestamp": 1775362213,
+          "side": "SELL",
+          "price": 0.9639999999161744,
+          "size": 2.1159875397250554,
+          "usdcSize": 2.0398119881175796,
+          "traderPercent": 10,
+          "yourSize": 2.0398119881175796
+        },
+        {
+          "timestamp": 1775362237,
+          "side": "SELL",
+          "price": 0.964,
+          "size": 1.9043887857525499,
+          "usdcSize": 1.835830789465458,
+          "traderPercent": 10,
+          "yourSize": 1.835830789465458
+        },
+        {
+          "timestamp": 1775363641,
+          "side": "SELL",
+          "price": 0.964,
+          "size": 1.713949907177295,
+          "usdcSize": 1.6522477105189124,
+          "traderPercent": 10,
+          "yourSize": 1.6522477105189124
+        },
+        {
+          "timestamp": 1775363651,
+          "side": "SELL",
+          "price": 0.964,
+          "size": 1.5425549164595658,
+          "usdcSize": 1.4870229394670214,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 1.4870229394670214
+        },
+        {
+          "timestamp": 1775364855,
+          "side": "SELL",
+          "price": 0.9639999851857888,
+          "size": 1.3882994248136091,
+          "usdcSize": 1.3383206249537583,
+          "traderPercent": 10,
+          "yourSize": 1.3383206249537583
+        },
+        {
+          "timestamp": 1775379819,
+          "side": "SELL",
+          "price": 0.964,
+          "size": 1.249469482332248,
+          "usdcSize": 1.204488580968287,
+          "traderPercent": 10,
+          "yourSize": 1.204488580968287
+        },
+        {
+          "timestamp": 1775380013,
+          "side": "SELL",
+          "price": 0.9639999979779011,
+          "size": 1.1245225340990233,
+          "usdcSize": 1.0840397205975627,
+          "traderPercent": 10,
+          "yourSize": 1.0840397205975627
+        },
+        {
+          "timestamp": 1775380217,
+          "side": "SELL",
+          "price": 0.9639999915167984,
+          "size": 1.0120702806891209,
+          "usdcSize": 0.9756357419987163,
+          "traderPercent": 10,
+          "yourSize": 0.9756357419987163
+        },
+        {
+          "timestamp": 1775393075,
+          "side": "SELL",
+          "price": 0.9639998708238882,
+          "size": 0.9108632526202087,
+          "usdcSize": 0.8780720578641078,
+          "traderPercent": 10,
+          "yourSize": 0.8780720578641078
+        },
+        {
+          "timestamp": 1775393075,
+          "side": "SELL",
+          "price": 0.9639997275092287,
+          "size": 0.8197769273581879,
+          "usdcSize": 0.7902647345916458,
+          "traderPercent": 10,
+          "yourSize": 0.7902647345916458
+        },
+        {
+          "timestamp": 1775393075,
+          "side": "SELL",
+          "price": 0.9639993714711528,
+          "size": 0.7377992346223691,
+          "usdcSize": 0.7112379984478614,
+          "traderPercent": 10,
+          "yourSize": 0.7112379984478614
+        },
+        {
+          "timestamp": 1775393075,
+          "side": "SELL",
+          "price": 0.9639999984576,
+          "size": 0.6640193111601321,
+          "usdcSize": 0.640114614934184,
+          "traderPercent": 10,
+          "yourSize": 0.640114614934184
+        },
+        {
+          "timestamp": 1775393349,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.5976173800441189,
+          "usdcSize": 0.5749079196024424,
+          "traderPercent": 10,
+          "yourSize": 0.5749079196024424
+        },
+        {
+          "timestamp": 1775393349,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.537855642039707,
+          "usdcSize": 0.5174171276421982,
+          "traderPercent": 10,
+          "yourSize": 0.5174171276421982
+        },
+        {
+          "timestamp": 1775393349,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.4840700778357363,
+          "usdcSize": 0.4656754148779783,
+          "traderPercent": 10,
+          "yourSize": 0.4656754148779783
+        },
+        {
+          "timestamp": 1775393349,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.43566307005216265,
+          "usdcSize": 0.41910787339018046,
+          "traderPercent": 10,
+          "yourSize": 0.41910787339018046
+        },
+        {
+          "timestamp": 1775393349,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.3920967630469464,
+          "usdcSize": 0.3771970860511624,
+          "traderPercent": 10,
+          "yourSize": 0.3771970860511624
+        },
+        {
+          "timestamp": 1775393349,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.3528870867422518,
+          "usdcSize": 0.3394773774460462,
+          "traderPercent": 10,
+          "yourSize": 0.3394773774460462
+        },
+        {
+          "timestamp": 1775393351,
+          "side": "SELL",
+          "price": 0.962,
+          "size": 0.3175983780680266,
+          "usdcSize": 0.3055296397014416,
+          "traderPercent": 10,
+          "yourSize": 0.3055296397014416
+        },
+        {
+          "timestamp": 1775393385,
+          "side": "SELL",
+          "price": 0.961999955129299,
+          "size": 0.28583854026122396,
+          "usdcSize": 0.2749766629055218,
+          "traderPercent": 10,
+          "yourSize": 0.2749766629055218
+        },
+        {
+          "timestamp": 1775393393,
+          "side": "SELL",
+          "price": 0.9619999828257475,
+          "size": 0.25725468623510156,
+          "usdcSize": 0.24747900374001075,
+          "traderPercent": 10,
+          "yourSize": 0.24747900374001075
+        },
+        {
+          "timestamp": 1775393399,
+          "side": "SELL",
+          "price": 0.9619999827641598,
+          "size": 0.2315292176115914,
+          "usdcSize": 0.2227311033517503,
+          "traderPercent": 10,
+          "yourSize": 0.2227311033517503
+        },
+        {
+          "timestamp": 1775481705,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.20837629585043224,
+          "usdcSize": 0.20108312549566712,
+          "traderPercent": 10,
+          "yourSize": 0.20108312549566712
+        },
+        {
+          "timestamp": 1775481775,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.187538666265389,
+          "usdcSize": 0.18097481294610038,
+          "traderPercent": 10,
+          "yourSize": 0.18097481294610038
+        },
+        {
+          "timestamp": 1775481825,
+          "side": "SELL",
+          "price": 0.9649999960247168,
+          "size": 0.1687847996388501,
+          "usdcSize": 0.16287733098052296,
+          "traderPercent": 10,
+          "yourSize": 0.16287733098052296
+        },
+        {
+          "timestamp": 1775481861,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.1519063196749651,
+          "usdcSize": 0.14658959848634132,
+          "traderPercent": 10,
+          "yourSize": 0.14658959848634132
+        },
+        {
+          "timestamp": 1775483037,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.13671568770746859,
+          "usdcSize": 0.13193063863770718,
+          "traderPercent": 10,
+          "yourSize": 0.13193063863770718
+        },
+        {
+          "timestamp": 1775483081,
+          "side": "SELL",
+          "price": 0.9649994016991743,
+          "size": 0.12304411893672172,
+          "usdcSize": 0.1187375011565385,
+          "traderPercent": 10,
+          "yourSize": 0.1187375011565385
+        },
+        {
+          "timestamp": 1775483195,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.11073970704304954,
+          "usdcSize": 0.1068638172965428,
+          "traderPercent": 10,
+          "yourSize": 0.1068638172965428
+        },
+        {
+          "timestamp": 1775486131,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.09966573633874459,
+          "usdcSize": 0.09617743556688853,
+          "traderPercent": 10,
+          "yourSize": 0.09617743556688853
+        },
+        {
+          "timestamp": 1775486131,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.08969916270487013,
+          "usdcSize": 0.08655969201019968,
+          "traderPercent": 10,
+          "yourSize": 0.08655969201019968
+        },
+        {
+          "timestamp": 1775486131,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.08072924643438312,
+          "usdcSize": 0.0779037228091797,
+          "traderPercent": 10,
+          "yourSize": 0.0779037228091797
+        },
+        {
+          "timestamp": 1775486131,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.07265632179094482,
+          "usdcSize": 0.07011335052826174,
+          "traderPercent": 10,
+          "yourSize": 0.07011335052826174
+        },
+        {
+          "timestamp": 1775486131,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.06539068961185034,
+          "usdcSize": 0.06310201547543558,
+          "traderPercent": 10,
+          "yourSize": 0.06310201547543558
+        },
+        {
+          "timestamp": 1775486273,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.05885162065066529,
+          "usdcSize": 0.056791813927892,
+          "traderPercent": 10,
+          "yourSize": 0.056791813927892
+        },
+        {
+          "timestamp": 1775486963,
+          "side": "SELL",
+          "price": 0.965,
+          "size": 0.052966458585598765,
+          "usdcSize": 0.05111263253510281,
+          "traderPercent": 10,
+          "yourSize": 0.05111263253510281
+        }
+      ]
+    },
+    {
+      "market": "russia-x-ukraine-ceasefire-by-june-30-2026",
+      "outcome": "Yes",
+      "sharesHeld": 750,
+      "entryPrice": 0.03,
+      "exitPrice": 0.1,
+      "invested": 25,
+      "currentValue": 75,
+      "pnl": 50,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774901305,
+          "side": "BUY",
+          "price": 0.03,
+          "size": 833.3333333333334,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774901657,
+          "side": "SELL",
+          "price": 0.1,
+          "size": 83.33333333333334,
+          "usdcSize": 8.333333333333334,
+          "traderPercent": 10,
+          "yourSize": 8.333333333333334
+        }
+      ]
+    },
+    {
+      "market": "will-mlb-opening-night-yankees-vs-giants-be-the-top-us-netflix-show-this-week",
+      "outcome": "No",
+      "sharesHeld": 253.7764977272727,
+      "entryPrice": 0.1,
+      "exitPrice": 0.972,
+      "invested": 50,
+      "currentValue": 246.67075579090906,
+      "pnl": 196.67075579090906,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774984895,
+          "side": "BUY",
+          "price": 0.1,
+          "size": 250,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774985189,
+          "side": "SELL",
+          "price": 0.391,
+          "size": 25,
+          "usdcSize": 9.775,
+          "traderPercent": 10,
+          "yourSize": 9.775
+        },
+        {
+          "timestamp": 1774985193,
+          "side": "SELL",
+          "price": 0.391,
+          "size": 22.5,
+          "usdcSize": 8.7975,
+          "traderPercent": 10,
+          "yourSize": 8.7975
+        },
+        {
+          "timestamp": 1774985785,
+          "side": "BUY",
+          "price": 0.11,
+          "size": 227.27272727272728,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774986197,
+          "side": "SELL",
+          "price": 0.838,
+          "size": 42.97727272727273,
+          "usdcSize": 36.01495454545454,
+          "traderPercent": 10,
+          "yourSize": 36.01495454545454
+        },
+        {
+          "timestamp": 1774986323,
+          "side": "SELL",
+          "price": 0.838,
+          "size": 38.67954545454545,
+          "usdcSize": 32.413459090909086,
+          "traderPercent": 10,
+          "yourSize": 32.413459090909086
+        },
+        {
+          "timestamp": 1774986433,
+          "side": "SELL",
+          "price": 0.8989996792753567,
+          "size": 34.8115909090909,
+          "usdcSize": 31.295609062337647,
+          "traderPercent": 10,
+          "yourSize": 31.295609062337647
+        },
+        {
+          "timestamp": 1774986457,
+          "side": "SELL",
+          "price": 0.899,
+          "size": 31.33043181818181,
+          "usdcSize": 28.16605820454545,
+          "traderPercent": 10,
+          "yourSize": 28.16605820454545
+        },
+        {
+          "timestamp": 1774986527,
+          "side": "SELL",
+          "price": 0.972,
+          "size": 28.197388636363634,
+          "usdcSize": 27.40786175454545,
+          "traderPercent": 10,
+          "yourSize": 27.40786175454545
+        }
+      ]
+    },
+    {
+      "market": "us-confirms-pilots-rescued-by-april-4-343",
+      "outcome": "Yes",
+      "sharesHeld": 100.37180464761539,
+      "entryPrice": 0.28,
+      "exitPrice": 0.45,
+      "invested": 50,
+      "currentValue": 45.16731209142693,
+      "pnl": -4.832687908573071,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1775239391,
+          "side": "BUY",
+          "price": 0.28,
+          "size": 89.28571428571428,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775239431,
+          "side": "BUY",
+          "price": 0.3098092361702677,
+          "size": 80.69481823408351,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775239431,
+          "side": "SELL",
+          "price": 0.6499999024999659,
+          "size": 16.99805325197978,
+          "usdcSize": 11.048732956476085,
+          "traderPercent": 10,
+          "yourSize": 11.048732956476085
+        },
+        {
+          "timestamp": 1775239633,
+          "side": "SELL",
+          "price": 0.65,
+          "size": 15.298247926781805,
+          "usdcSize": 9.943861152408173,
+          "traderPercent": 10,
+          "yourSize": 9.943861152408173
+        },
+        {
+          "timestamp": 1775239781,
+          "side": "SELL",
+          "price": 0.55,
+          "size": 13.768423134103623,
+          "usdcSize": 7.5726327237569935,
+          "traderPercent": 10,
+          "yourSize": 7.5726327237569935
+        },
+        {
+          "timestamp": 1775239913,
+          "side": "SELL",
+          "price": 0.49024628139478177,
+          "size": 12.39158082069326,
+          "usdcSize": 6.074926417947769,
+          "traderPercent": 10,
+          "yourSize": 6.074926417947769
+        },
+        {
+          "timestamp": 1775240015,
+          "side": "SELL",
+          "price": 0.45,
+          "size": 11.152422738623933,
+          "usdcSize": 5.01859023238077,
+          "traderPercent": 10,
+          "yourSize": 5.01859023238077
+        }
+      ]
+    },
+    {
+      "market": "will-ukraine-re-enter-rodynske-by-april-30",
+      "outcome": "Yes",
+      "sharesHeld": 239.87113424631588,
+      "entryPrice": 0.7812126537785589,
+      "exitPrice": 0.43652898907766685,
+      "invested": 225,
+      "currentValue": 104.71070374145758,
+      "pnl": -120.28929625854242,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1775376341,
+          "side": "BUY",
+          "price": 0.7812126537785589,
+          "size": 32.00152977435828,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775376417,
+          "side": "BUY",
+          "price": 0.8557805907172996,
+          "size": 29.213095355487624,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775376593,
+          "side": "BUY",
+          "price": 0.88,
+          "size": 28.40909090909091,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775378757,
+          "side": "SELL",
+          "price": 0.86,
+          "size": 8.962371603893683,
+          "usdcSize": 7.707639579348567,
+          "traderPercent": 10,
+          "yourSize": 7.707639579348567
+        },
+        {
+          "timestamp": 1775378915,
+          "side": "SELL",
+          "price": 0.86,
+          "size": 8.066134443504314,
+          "usdcSize": 6.93687562141371,
+          "traderPercent": 10,
+          "yourSize": 6.93687562141371
+        },
+        {
+          "timestamp": 1775381439,
+          "side": "BUY",
+          "price": 0.7690969349973811,
+          "size": 32.50565548032659,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775381499,
+          "side": "BUY",
+          "price": 0.79,
+          "size": 31.645569620253163,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775387947,
+          "side": "SELL",
+          "price": 0.86,
+          "size": 13.674643509211856,
+          "usdcSize": 11.760193417922196,
+          "traderPercent": 10,
+          "yourSize": 11.760193417922196
+        },
+        {
+          "timestamp": 1775407563,
+          "side": "BUY",
+          "price": 0.6765857661081361,
+          "size": 36.95023048416355,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775409219,
+          "side": "BUY",
+          "price": 0.6872538487362716,
+          "size": 36.376660597783804,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775411329,
+          "side": "BUY",
+          "price": 0.6998743671243891,
+          "size": 35.72069670549419,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775411381,
+          "side": "BUY",
+          "price": 0.7266575125868597,
+          "size": 34.4041031255583,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775461187,
+          "side": "SELL",
+          "price": 0.43652898907766685,
+          "size": 26.652348249590656,
+          "usdcSize": 11.634522637939732,
+          "traderPercent": 10,
+          "yourSize": 11.634522637939732
+        }
+      ]
+    },
+    {
+      "market": "us-forces-enter-iran-by-april-30-899",
+      "outcome": "Yes",
+      "sharesHeld": 589.18033668894,
+      "entryPrice": 0.99,
+      "exitPrice": null,
+      "invested": 584.9803185306378,
+      "currentValue": 585.0560751495461,
+      "pnl": 0.07575661890837182,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1775491455,
+          "side": "BUY",
+          "price": 0.99,
+          "size": 25.252525252525253,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492737,
+          "side": "BUY",
+          "price": 0.993,
+          "size": 25.17623363544814,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492851,
+          "side": "BUY",
+          "price": 0.9930000006456373,
+          "size": 25.176233619078836,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492857,
+          "side": "BUY",
+          "price": 0.9930000036473684,
+          "size": 25.17623354297382,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492861,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492895,
+          "side": "BUY",
+          "price": 0.9930000025614815,
+          "size": 25.17623357050508,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492935,
+          "side": "BUY",
+          "price": 0.993,
+          "size": 25.17623363544814,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492935,
+          "side": "BUY",
+          "price": 0.9930000001538445,
+          "size": 25.176233631547607,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492937,
+          "side": "BUY",
+          "price": 0.9930000006923,
+          "size": 25.176233617895765,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492939,
+          "side": "BUY",
+          "price": 0.9930000069090001,
+          "size": 25.176233460279356,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492941,
+          "side": "BUY",
+          "price": 0.993,
+          "size": 25.17623363544814,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492947,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492947,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492953,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492969,
+          "side": "BUY",
+          "price": 0.9930000011573333,
+          "size": 25.176233606105445,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492975,
+          "side": "BUY",
+          "price": 0.993,
+          "size": 25.17623363544814,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775492987,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493001,
+          "side": "BUY",
+          "price": 0.99300000006916,
+          "size": 25.176233633694675,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493015,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493041,
+          "side": "BUY",
+          "price": 0.99300000013818,
+          "size": 25.17623363194476,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493043,
+          "side": "BUY",
+          "price": 0.9930000006923,
+          "size": 25.176233617895765,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493053,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493053,
+          "side": "BUY",
+          "price": 0.9930000066567308,
+          "size": 25.176233466675317,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1775493059,
+          "side": "BUY",
+          "price": 0.9930000013874,
+          "size": 10.050673229298562,
+          "usdcSize": 9.980318530637776,
+          "traderPercent": 0,
+          "yourSize": 9.980318530637776
+        }
+      ]
+    }
+  ]
+}

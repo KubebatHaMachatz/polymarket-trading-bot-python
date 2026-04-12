@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/tzahit/code/polymarket-copytrading-bot-snake/logs/.f1e59d291582558a77f2a5dc2060da781ffdb0af-audit.json",
+    "files": [
+        {
+            "date": 1775939504211,
+            "name": "/Users/tzahit/code/polymarket-copytrading-bot-snake/logs/bot-2026-04-11.log",
+            "hash": "4c87bd391c8b08f83f1ea0a431fe840101689fac5287203cf9a9d50f70316532"
+        },
+        {
+            "date": 1775941201123,
+            "name": "/Users/tzahit/code/polymarket-copytrading-bot-snake/logs/bot-2026-04-12.log",
+            "hash": "3b347fb61c8827316ab9f7b3c2626adf26d3b45f760c8cb026ac9d302cf87a63"
+        }
+    ],
+    "hashType": "sha256"
+}

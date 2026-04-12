@@ -1,0 +1,180 @@
+{
+  "id": "sim_0xd5ccdf_1775761940884",
+  "name": "FIXED_0xd5cc_30d_copy10pct",
+  "logic": "fixed_percentage",
+  "timestamp": 1775761940885,
+  "traderAddress": "0xd5ccdf772f795547e299de57f47966e24de8dea4",
+  "startingCapital": 1000,
+  "currentCapital": 1102.2588820709905,
+  "totalTrades": 734,
+  "copiedTrades": 12,
+  "skippedTrades": 722,
+  "totalInvested": 1099.7221994244508,
+  "currentValue": 1102.2588820709905,
+  "realizedPnl": 0,
+  "unrealizedPnl": 2.2679836496839094,
+  "totalPnl": 102.25888207099047,
+  "roi": 10.225888207099047,
+  "positions": [
+    {
+      "market": "will-lionel-messi-announce-his-retirement-in-2026",
+      "outcome": "No",
+      "sharesHeld": 5.829000000000001,
+      "entryPrice": 0.97232750042889,
+      "exitPrice": null,
+      "invested": 5.667697,
+      "currentValue": 5.667697,
+      "pnl": 0,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773242483,
+          "side": "BUY",
+          "price": 0.97232750042889,
+          "size": 5.829000000000001,
+          "usdcSize": 5.667697,
+          "traderPercent": 0.05667697,
+          "yourSize": 5.667697
+        }
+      ]
+    },
+    {
+      "market": "will-russia-capture-hryshyne-by-march-31-2026-299",
+      "outcome": "Yes",
+      "sharesHeld": 156.8169802630373,
+      "entryPrice": 0.6597265174244172,
+      "exitPrice": 0.792685014231864,
+      "invested": 136.40875880519113,
+      "currentValue": 145.5354513731669,
+      "pnl": 9.126692567975766,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773297129,
+          "side": "BUY",
+          "price": 0.6597265174244172,
+          "size": 51.99600000000001,
+          "usdcSize": 34.303140000000006,
+          "traderPercent": 0.34303140000000004,
+          "yourSize": 34.303140000000006
+        },
+        {
+          "timestamp": 1773300981,
+          "side": "SELL",
+          "price": 0.792685014231864,
+          "size": 5.199600000000002,
+          "usdcSize": 4.121645000000002,
+          "traderPercent": 10.000000000000002,
+          "yourSize": 4.121645000000002
+        },
+        {
+          "timestamp": 1773339567,
+          "side": "BUY",
+          "price": 0.9280592645582939,
+          "size": 110.02058026303729,
+          "usdcSize": 102.10561880519113,
+          "traderPercent": 2.6724672999999997,
+          "yourSize": 102.10561880519113
+        }
+      ]
+    },
+    {
+      "market": "will-russia-capture-hryshyne-by-march-15-2026-338",
+      "outcome": "Yes",
+      "sharesHeld": 23.442398979437037,
+      "entryPrice": 0.24411149545491112,
+      "exitPrice": 0.51,
+      "invested": 11.174380940259557,
+      "currentValue": 22.504703020259555,
+      "pnl": 11.330322079999998,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773297397,
+          "side": "BUY",
+          "price": 0.24411149545491112,
+          "size": 24.862000000000002,
+          "usdcSize": 6.069100000000001,
+          "traderPercent": 0.060691,
+          "yourSize": 6.069100000000001
+        },
+        {
+          "timestamp": 1773300965,
+          "side": "SELL",
+          "price": 0.52,
+          "size": 2.4862,
+          "usdcSize": 1.2928240000000002,
+          "traderPercent": 10,
+          "yourSize": 1.2928240000000002
+        },
+        {
+          "timestamp": 1773300965,
+          "side": "SELL",
+          "price": 0.52,
+          "size": 2.2375800000000003,
+          "usdcSize": 1.1635416000000003,
+          "traderPercent": 10,
+          "yourSize": 1.1635416000000003
+        },
+        {
+          "timestamp": 1773301017,
+          "side": "SELL",
+          "price": 0.51,
+          "size": 2.0138220000000002,
+          "usdcSize": 1.02704922,
+          "traderPercent": 10,
+          "yourSize": 1.02704922
+        },
+        {
+          "timestamp": 1773339573,
+          "side": "BUY",
+          "price": 0.96,
+          "size": 5.318000979437038,
+          "usdcSize": 5.105280940259556,
+          "traderPercent": 5.07408,
+          "yourSize": 5.105280940259556
+        }
+      ]
+    },
+    {
+      "market": "will-reza-pahlavi-lead-iran-in-2026",
+      "outcome": "No",
+      "sharesHeld": 1022.3373715309369,
+      "entryPrice": 0.8364163324681196,
+      "exitPrice": 0.8459128107207937,
+      "invested": 946.4713626790001,
+      "currentValue": 928.2823316807082,
+      "pnl": -18.189030998291855,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1773303843,
+          "side": "BUY",
+          "price": 0.8364163324681196,
+          "size": 1092.1437461454855,
+          "usdcSize": 913.4868666790001,
+          "traderPercent": 17.16888386,
+          "yourSize": 913.4868666790001
+        },
+        {
+          "timestamp": 1773304105,
+          "side": "SELL",
+          "price": 0.8459128107207937,
+          "size": 109.21437461454855,
+          "usdcSize": 92.38583860130646,
+          "traderPercent": 10,
+          "yourSize": 92.38583860130646
+        },
+        {
+          "timestamp": 1773310961,
+          "side": "BUY",
+          "price": 0.837,
+          "size": 39.408,
+          "usdcSize": 32.984496,
+          "traderPercent": 0.32984496,
+          "yourSize": 32.984496
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "id": "sim_0x492442_1775764531467",
+  "name": "FIXED_0x4924_14d_size$25",
+  "logic": "fixed_size",
+  "timestamp": 1775764531467,
+  "traderAddress": "0x492442eab586f242b53bda933fd5de859c8a3782",
+  "startingCapital": 1000,
+  "currentCapital": 1004.6402504394187,
+  "totalTrades": 1873,
+  "copiedTrades": 41,
+  "skippedTrades": 1832,
+  "totalInvested": 999.9375,
+  "currentValue": 1004.6402504394187,
+  "realizedPnl": 0,
+  "unrealizedPnl": 4.640250439418651,
+  "totalPnl": 4.640250439418651,
+  "roi": 0.4640250439418651,
+  "positions": [
+    {
+      "market": "nhl-cbj-mon-2026-03-26-total-6pt5",
+      "outcome": "Under",
+      "sharesHeld": 394.3842027375644,
+      "entryPrice": 0.48,
+      "exitPrice": null,
+      "invested": 199.9375,
+      "currentValue": 205.0797854235335,
+      "pnl": 5.142285423533508,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774564047,
+          "side": "BUY",
+          "price": 0.48,
+          "size": 52.083333333333336,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564063,
+          "side": "BUY",
+          "price": 0.48999928359290196,
+          "size": 51.02048275803264,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564087,
+          "side": "BUY",
+          "price": 0.5,
+          "size": 50,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564097,
+          "side": "BUY",
+          "price": 0.5,
+          "size": 50,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564637,
+          "side": "BUY",
+          "price": 0.52,
+          "size": 48.07692307692307,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564685,
+          "side": "BUY",
+          "price": 0.53,
+          "size": 47.16981132075472,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565755,
+          "side": "BUY",
+          "price": 0.5200000172800011,
+          "size": 48.076921479289894,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565755,
+          "side": "BUY",
+          "price": 0.52,
+          "size": 45.67307692307692,
+          "usdcSize": 23.75,
+          "traderPercent": 0,
+          "yourSize": 23.75
+        },
+        {
+          "timestamp": 1774565755,
+          "side": "BUY",
+          "price": 0.52,
+          "size": 2.2836538461538463,
+          "usdcSize": 1.1875,
+          "traderPercent": 0,
+          "yourSize": 1.1875
+        }
+      ]
+    },
+    {
+      "market": "nhl-chi-phi-2026-03-26-total-5pt5",
+      "outcome": "Over",
+      "sharesHeld": 144.48376725523894,
+      "entryPrice": 0.51,
+      "exitPrice": null,
+      "invested": 75,
+      "currentValue": 76.26039255389622,
+      "pnl": 1.2603925538962244,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774564283,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564461,
+          "side": "BUY",
+          "price": 0.5197625344755624,
+          "size": 48.09888813018211,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564473,
+          "side": "BUY",
+          "price": 0.5278128747790596,
+          "size": 47.36527128191957,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "nba-nyk-cha-2026-03-26-total-224pt5",
+      "outcome": "Under",
+      "sharesHeld": 143.32365747460085,
+      "entryPrice": 0.52,
+      "exitPrice": null,
+      "invested": 75,
+      "currentValue": 75.96153846153845,
+      "pnl": 0.9615384615384528,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774564753,
+          "side": "BUY",
+          "price": 0.52,
+          "size": 48.07692307692307,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564769,
+          "side": "BUY",
+          "price": 0.52,
+          "size": 48.07692307692307,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565141,
+          "side": "BUY",
+          "price": 0.53,
+          "size": 47.16981132075472,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "nba-nyk-cha-2026-03-26-total-223pt5",
+      "outcome": "Under",
+      "sharesHeld": 199.077024698297,
+      "entryPrice": 0.49,
+      "exitPrice": null,
+      "invested": 100,
+      "currentValue": 101.52928259613148,
+      "pnl": 1.5292825961314804,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774564799,
+          "side": "BUY",
+          "price": 0.49,
+          "size": 51.02040816326531,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774564825,
+          "side": "BUY",
+          "price": 0.5,
+          "size": 50,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565113,
+          "side": "BUY",
+          "price": 0.5098190258112616,
+          "size": 49.03700869189446,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565179,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "nba-nop-det-2026-03-26-spread-home-5pt5",
+      "outcome": "Pistons",
+      "sharesHeld": 356.1649659863946,
+      "entryPrice": 0.48,
+      "exitPrice": null,
+      "invested": 175,
+      "currentValue": 174.52083333333334,
+      "pnl": -0.4791666666666572,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774564967,
+          "side": "BUY",
+          "price": 0.48,
+          "size": 52.083333333333336,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565055,
+          "side": "BUY",
+          "price": 0.49,
+          "size": 51.02040816326531,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565537,
+          "side": "BUY",
+          "price": 0.5,
+          "size": 50,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565557,
+          "side": "BUY",
+          "price": 0.49,
+          "size": 51.02040816326531,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565605,
+          "side": "BUY",
+          "price": 0.5,
+          "size": 50,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565617,
+          "side": "BUY",
+          "price": 0.49,
+          "size": 51.02040816326531,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565667,
+          "side": "BUY",
+          "price": 0.49,
+          "size": 51.02040816326531,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "nba-nop-det-2026-03-26-spread-home-4pt5",
+      "outcome": "Pistons",
+      "sharesHeld": 94.34171394557774,
+      "entryPrice": 0.5299765031492366,
+      "exitPrice": null,
+      "invested": 50,
+      "currentValue": 50.0011083911562,
+      "pnl": 0.001108391156201094,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774564995,
+          "side": "BUY",
+          "price": 0.5299765031492366,
+          "size": 47.17190262482302,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565063,
+          "side": "BUY",
+          "price": 0.53,
+          "size": 47.16981132075472,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "nba-sac-orl-2026-03-26-total-230pt5",
+      "outcome": "Over",
+      "sharesHeld": 95.25669839943102,
+      "entryPrice": 0.52,
+      "exitPrice": null,
+      "invested": 50,
+      "currentValue": 50.47538789040562,
+      "pnl": 0.4753878904056208,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774565265,
+          "side": "BUY",
+          "price": 0.52,
+          "size": 48.07692307692307,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565293,
+          "side": "BUY",
+          "price": 0.529888068120437,
+          "size": 47.17977532250794,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    },
+    {
+      "market": "nba-sac-orl-2026-03-26-total-231pt5",
+      "outcome": "Over",
+      "sharesHeld": 542.2666003399122,
+      "entryPrice": 0.5,
+      "exitPrice": null,
+      "invested": 275,
+      "currentValue": 270.7494217894238,
+      "pnl": -4.25057821057618,
+      "closed": false,
+      "trades": [
+        {
+          "timestamp": 1774565273,
+          "side": "BUY",
+          "price": 0.5,
+          "size": 50,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.5099142361640716,
+          "size": 49.027852581774006,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.51,
+          "size": 49.01960784313725,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565299,
+          "side": "BUY",
+          "price": 0.5100000027415144,
+          "size": 49.019607579631455,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565369,
+          "side": "BUY",
+          "price": 0.49969417416737205,
+          "size": 50.030601300599265,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        },
+        {
+          "timestamp": 1774565407,
+          "side": "BUY",
+          "price": 0.4992920855160697,
+          "size": 50.070891819084075,
+          "usdcSize": 25,
+          "traderPercent": 0,
+          "yourSize": 25
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scanDate": "2026-04-11T20:10:51.605Z",
+  "config": {
+    "historyDays": 30,
+    "multiplier": 1,
+    "minOrderSize": 1,
+    "startingCapital": 1000,
+    "minTraderVolume": 500,
+    "minTraderBets": 50,
+    "scanMarketsLimit": 20
+  },
+  "summary": {
+    "totalScanned": 3,
+    "totalProfitable": 0,
+    "avgROI": null,
+    "avgWinRate": null
+  },
+  "topTraders": []
+}
