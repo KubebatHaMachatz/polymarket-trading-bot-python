@@ -2,3 +2,9 @@
 *.log
 
 .env
+
+dist/
+*.json
+
+node_modules/
+*.txt
