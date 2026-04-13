@@ -8,3 +8,12 @@ dist/
 
 node_modules/
 *.txt
+
+coverage/
+polymarket-copytrading-bot/logs/.DS_Store
+
+*.html
+
+polymarket-copytrading-bot/.DS_Store
+
+.DS_Store
