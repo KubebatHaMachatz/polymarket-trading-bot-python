@@ -13,7 +13,7 @@ if (!address) {
 async function fetchTrades(trader: string) {
     console.log('🚀 Fetching trades for ' + trader + '...');
     try {
-        const response = await axios.get('https://data-api.polymarket.com/activity?user=' + trader + '&type=TRADE&limit=500');
+        const response = await axios.get('https://data-api.polymarket.com/activity?user=' + trader + '&type=TRADE&limit=1000');
         return response.data;
     } catch (e) {
         console.error('API Error:', e);
@@ -41,7 +41,9 @@ async function main() {
         trades: trades.map((t: any) => ({
             timestamp: t.timestamp,
             asset: t.asset,
-            market: t.market,
+            market: t.title || t.slug || 'Unknown',
+            slug: t.slug,
+            eventSlug: t.eventSlug,
             side: t.side,
             price: t.price,
             usdcSize: t.usdcSize,

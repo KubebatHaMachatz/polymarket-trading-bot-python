@@ -14,6 +14,7 @@ import { ErrorHandler } from '../utils/errorHandler';
 import { ENV } from '../config/env';
 import { validateTrade, ValidationResult } from './OrderValidator';
 import { AggregatedTrade } from './TradeAggregator';
+import { DryRunService } from './DryRunService';
 
 const PREVIEW_MODE = ENV.PREVIEW_MODE;
 
@@ -33,12 +34,13 @@ const executeTrade = async (
     const UserActivity = getUserActivityModel(userAddress);
     const CopyExecution = getCopyExecutionModel();
     const isMultiWallet = typeof followerWallet === 'string' && followerWallet.length > 0;
+    const myWallet = followerWallet ?? ENV.PROXY_WALLET;
 
     try {
         if (!isMultiWallet) {
             await ErrorHandler.withErrorHandling(
                 () => UserActivity.updateOne({ _id: trade._id }, { $set: { botExcutedTime: 1 } }).exec(),
-                `Marking trade as processing for ${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`,
+                \`Marking trade as processing for \${userAddress.slice(0, 6)}...\${userAddress.slice(-4)}\`,
                 'mark trade processing'
             );
         }
@@ -51,7 +53,7 @@ const executeTrade = async (
             slug: trade.slug,
             eventSlug: trade.eventSlug,
             transactionHash: trade.transactionHash,
-            ...(followerWallet ? { follower: `${followerWallet.slice(0, 8)}...${followerWallet.slice(-4)}` } : {}),
+            ...(followerWallet ? { follower: \`\${followerWallet.slice(0, 8)}...\${followerWallet.slice(-4)}\` } : {}),
         });
 
         const validation: ValidationResult = await validateTrade(
@@ -62,7 +64,7 @@ const executeTrade = async (
         );
 
         if (!validation.isValid) {
-            Logger.error(`Trade validation failed: ${validation.reason}`);
+            Logger.error(\`Trade validation failed: \${validation.reason}\`);
             await Notifier.notifyFiltered(validation.reason || 'Unknown reason', trade.slug || trade.title || trade.asset, userAddress, trade.usdcSize);
             if (isMultiWallet && followerWallet) {
                 await CopyExecution.create({
@@ -80,7 +82,16 @@ const executeTrade = async (
         Logger.balance(validation.myBalance!, validation.userBalance!, userAddress);
 
         if (PREVIEW_MODE) {
-            Logger.info(`[PREVIEW] Would execute ${trade.side} $${trade.usdcSize?.toFixed(2) ?? '?'} for ${trade.slug || trade.asset}`);
+            Logger.info(\`[DRY RUN] Simulating \${trade.side} trade for \${trade.slug || trade.asset}\`);
+            
+            // DRY RUN FEATURE: Simulate the trade in the database to track PnL
+            await DryRunService.simulateTrade(
+                trade,
+                userAddress,
+                myWallet,
+                validation.myBalance!
+            );
+
             if (isMultiWallet && followerWallet) {
                 await CopyExecution.create({
                     traderAddress: userAddress,
@@ -117,12 +128,12 @@ const executeTrade = async (
                 userAddress,
                 isMultiWallet
             ),
-            `Executing ${trade.side} trade for ${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`,
+            \`Executing \${trade.side} trade for \${userAddress.slice(0, 6)}...\${userAddress.slice(-4)}\`,
             'execute trade order'
         );
         Logger.separator();
     } catch (error) {
-        ErrorHandler.handle(error, `Trade execution for ${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`);
+        ErrorHandler.handle(error, \`Trade execution for \${userAddress.slice(0, 6)}...\${userAddress.slice(-4)}\`);
         if (isMultiWallet && followerWallet) {
             try {
                 await CopyExecution.create({
@@ -162,11 +173,11 @@ const executeAggregatedTrades = async (
 ): Promise<void> => {
     for (const agg of aggregatedTrades) {
         try {
-            Logger.header(`📊 AGGREGATED TRADE (${agg.trades.length} trades combined)`);
-            Logger.info(`Market: ${agg.slug || agg.asset || 'Unknown'}`);
-            Logger.info(`Side: ${agg.side}`);
-            Logger.info(`Total volume: $${agg.totalUsdcSize.toFixed(2)}`);
-            Logger.info(`Average price: $${agg.averagePrice.toFixed(4)}`);
+            Logger.header(\`📊 AGGREGATED TRADE (\${agg.trades.length} trades combined)\`);
+            Logger.info(\`Market: \${agg.slug || agg.asset || 'Unknown'}\`);
+            Logger.info(\`Side: \${agg.side}\`);
+            Logger.info(\`Total volume: \$\${agg.totalUsdcSize.toFixed(2)}\`);
+            Logger.info(\`Average price: \$\${agg.averagePrice.toFixed(4)}\`);
 
             // Mark all individual trades as being processed
             for (const trade of agg.trades) {
@@ -174,11 +185,11 @@ const executeAggregatedTrades = async (
                     const UserActivity = getUserActivityModel(trade.userAddress);
                     await ErrorHandler.withErrorHandling(
                         () => UserActivity.updateOne({ _id: trade._id }, { $set: { botExcutedTime: 1 } }).exec(),
-                        `Marking aggregated trade as processing for ${trade.userAddress.slice(0, 6)}...${trade.userAddress.slice(-4)}`,
+                        \`Marking aggregated trade as processing for \${trade.userAddress.slice(0, 6)}...\${trade.userAddress.slice(-4)}\`,
                         'mark aggregated trade processing'
                     );
                 } catch (error) {
-                    ErrorHandler.handle(error, `Failed to mark aggregated trade ${trade._id} as processing`);
+                    ErrorHandler.handle(error, \`Failed to mark aggregated trade \${trade._id} as processing\`);
                     // Continue with other trades
                 }
             }
@@ -187,14 +198,14 @@ const executeAggregatedTrades = async (
             const validation: ValidationResult = await validateTrade(agg.trades[0], agg.userAddress, undefined, clobClient);
 
             if (!validation.isValid) {
-                Logger.error(`Aggregated trade validation failed: ${validation.reason}`);
+                Logger.error(\`Aggregated trade validation failed: \${validation.reason}\`);
                 // Mark all trades as failed
                 for (const trade of agg.trades) {
                     try {
                         const UserActivity = getUserActivityModel(trade.userAddress);
                         await UserActivity.updateOne({ _id: trade._id }, { $set: { botExcutedTime: -1 } }).exec();
                     } catch (error) {
-                        ErrorHandler.handle(error, `Failed to mark aggregated trade ${trade._id} as failed`);
+                        ErrorHandler.handle(error, \`Failed to mark aggregated trade \${trade._id} as failed\`);
                     }
                 }
                 continue;
@@ -210,6 +221,23 @@ const executeAggregatedTrades = async (
                 side: agg.side as 'BUY' | 'SELL',
             };
 
+            if (PREVIEW_MODE) {
+                Logger.info(\`[DRY RUN] Simulating aggregated \${agg.side} trade\`);
+                await DryRunService.simulateTrade(
+                    syntheticTrade,
+                    agg.userAddress,
+                    ENV.PROXY_WALLET,
+                    validation.myBalance!
+                );
+                
+                for (const trade of agg.trades) {
+                    const UserActivity = getUserActivityModel(trade.userAddress);
+                    await UserActivity.updateOne({ _id: trade._id }, { $set: { bot: true } }).exec();
+                }
+                Logger.separator();
+                continue;
+            }
+
             // Execute the aggregated trade
             await ErrorHandler.withErrorHandling(
                 () => postOrder(
@@ -222,20 +250,20 @@ const executeAggregatedTrades = async (
                     validation.userBalance!,
                     agg.userAddress
                 ),
-                `Executing aggregated ${agg.side} trade for ${agg.userAddress.slice(0, 6)}...${agg.userAddress.slice(-4)}`,
+                \`Executing aggregated \${agg.side} trade for \${agg.userAddress.slice(0, 6)}...\${agg.userAddress.slice(-4)}\`,
                 'execute aggregated trade order'
             );
 
             Logger.separator();
         } catch (error) {
-            ErrorHandler.handle(error, `Aggregated trade execution for ${agg.userAddress.slice(0, 6)}...${agg.userAddress.slice(-4)}`);
+            ErrorHandler.handle(error, \`Aggregated trade execution for \${agg.userAddress.slice(0, 6)}...\${agg.userAddress.slice(-4)}\`);
             // Mark all trades as failed
             for (const trade of agg.trades) {
                 try {
                     const UserActivity = getUserActivityModel(trade.userAddress);
                     await UserActivity.updateOne({ _id: trade._id }, { $set: { botExcutedTime: -1 } }).exec();
                 } catch (markError) {
-                    ErrorHandler.handle(markError, `Failed to mark aggregated trade ${trade._id} as failed`);
+                    ErrorHandler.handle(markError, \`Failed to mark aggregated trade \${trade._id} as failed\`);
                 }
             }
         }

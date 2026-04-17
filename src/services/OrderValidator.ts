@@ -67,10 +67,10 @@ const validateTrade = async (
          * Rationale: Large whales often execute tiny "noise" trades ($0.10–$50) to test liquidity or "dust" followers.
          * We only want to mirror "high-conviction" moves.
          */
-        if (trade.usdcSize < ENV.MIN_LEADER_TRADE_USD) {
+        if (trade.side === 'BUY' && trade.usdcSize < ENV.MIN_LEADER_TRADE_USD) {
             return {
                 isValid: false,
-                reason: `[SKIP] Trade size below threshold. (Leader traded $${trade.usdcSize.toFixed(2)}, min $${ENV.MIN_LEADER_TRADE_USD})`,
+                reason: `[SKIP] BUY size below threshold. (Leader traded $${trade.usdcSize.toFixed(2)}, min $${ENV.MIN_LEADER_TRADE_USD})`,
             };
         }
 
